@@ -1,9 +1,9 @@
-**Unoficial Omnirom 4.3 for Sony Xperia Sola**
+**Unoficial OmniRom 4.3 for Sony Xperia Sola**
 
 Getting Started :
 
-    mkdir cm-10.2
-    cd cm-10.2
+    mkdir omni-4.3
+    cd omni-4.3
     repo init -u git://github.com/tadeas482/manifest.git -b omni-4.3
     repo sync
 
@@ -16,7 +16,7 @@ Patch android source code :
     patch -p1 < device/sony/pepper/patches/system_netd.patch
     patch -p1 < device/sony/pepper/patches/system_core.patch
 
-Our step is optional!!! Use only if you going to sync CM source code daily, than simple revert each patch before you sync CM source code :
+Our step is optional!!! Use only if you going to sync Omni source code daily, than simple revert each patch before you sync CM source code :
 
     patch -p1 -R < device/sony/pepper/patches/framework_av.patch
     patch -p1 -R < device/sony/pepper/patches/framework_native.patch
