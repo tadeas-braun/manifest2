@@ -423,4 +423,11 @@
   <project path="vendor/tmobile/apps/ThemeChooser" name="CyanogenMod/themes-platform-vendor-tmobile-apps-ThemeChooser" />
   <project path="vendor/tmobile/libs/com.tmobile.themes" name="CyanogenMod/android_vendor_tmobile_libs_com.tmobile.themes" />
   <project path="vendor/tmobile/providers/ThemeManager" name="CyanogenMod/android_vendor_tmobile_providers_ThemeManager" />
+
+ <!--Xperia Sola-->
+  
+  <project path="kernel/sony/u8500" name="munjeni/android_kernel_xperiago" remote="github" revision="jb-dev" />
+  <project path="device/sony/pepper" name="tadeas482/android_device_sony_pepper" remote="github" revision="cm-10.2" />
+  <project path="vendor/sony/pepper" name="tadeas482/proprietary_vendor_sony" remote="github" revision="master" />
+  <project path="hardware/semc" name="munjeni/aosp_4.3_hardware_semc" remote="github" revision="master" />
 </manifest>
