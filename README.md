@@ -4,7 +4,7 @@ Getting Started :
 
     mkdir cm-10.2
     cd cm-10.2
-    repo init -u git://github.com/tadeas482/android.git -b cm-10.2
+    repo init -u git://github.com/tadeas482/manifest.git -b cm-10.2
     repo sync
 
 Patch android source code :
