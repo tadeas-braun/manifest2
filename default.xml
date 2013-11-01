@@ -411,4 +411,11 @@
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
   <project path="vendor/omni" name="android_vendor_omni" remote="omnirom" revision="android-4.3" />
   <project path="packages/apps/MonthCalendarWidget" name="android_packages_apps_MonthCalendarWidget" remote="omnirom" revision="android-4.3" />
+
+      <!--Xperia Sola-->
+  
+  <project path="kernel/sony/u8500" name="munjeni/android_kernel_xperiago" remote="github" revision="jb-dev" />
+  <project path="device/sony/pepper" name="tadeas482/android_device_sony_pepper" remote="github" revision="omni-4.3" />
+  <project path="vendor/sony/pepper" name="tadeas482/proprietary_vendor_sony" remote="github" revision="master" />
+  <project path="hardware/semc" name="munjeni/aosp_4.3_hardware_semc" remote="github" revision="master" />
 </manifest>
