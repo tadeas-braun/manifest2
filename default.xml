@@ -1,433 +1,432 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<manifest>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head><title>default.xml - platform/manifest - Git at Google</title><link rel="stylesheet" type="text/css" href="//www.google.com/css/go.css" /><link rel="stylesheet" type="text/css" href="/+static/prettify/prettify.vf-M93Ay4IiiWRQSJKPGWQ.cache.css" /><link rel="stylesheet" type="text/css" href="/+static/gitiles.JPyDgEz4Jj5aQRFU8GjJJQ.cache.css" /><script src="/+static/prettify/prettify_compiled.GHRTDQJlSdpNotJivTmj9w.cache.js" type="text/javascript"></script></head><body onload="prettyPrint()"><h1><img src="//www.google.com/images/logo_sm.gif" alt="Google" />Git</h1><div class="menu"> <a href="https://www.google.com/a/SelectSession?service=gerritcodereview&amp;continue=https://android.googlesource.com/login/platform/manifest/%2B/refs/heads/android-4.4_r1/default.xml">Sign in</a> </div><div class="breadcrumbs"><a href="/?format=HTML">android</a> / <a href="/platform/manifest/">platform/manifest</a> / <a href="/platform/manifest/+/refs/heads/android-4.4_r1">refs/heads/android-4.4_r1</a> / <a href="/platform/manifest/+/refs/heads/android-4.4_r1/">.</a> / default.xml</div><div class="sha1">blob: 0921980d5a86f419f68982949ba74333fbb26e03 [<a href="/platform/manifest/+log/refs/heads/android-4.4_r1/default.xml">file history</a>]</div><pre class="git-blob prettyprint linenums lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;manifest&gt;
 
-  <remote  name="aosp"
-           fetch="https://android.googlesource.com"
-           review="android-review.googlesource.com" />
+  &lt;remote  name=&quot;aosp&quot;
+           fetch=&quot;..&quot; /&gt;
+  &lt;default revision=&quot;refs/tags/android-4.4_r1&quot;
+           remote=&quot;aosp&quot;
+           sync-j=&quot;4&quot; /&gt;
 
-  <remote  name="github"
-           fetch=".."
-           review="review.cyanogenmod.org" />
+  &lt;project path=&quot;build&quot; name=&quot;platform/build&quot; groups=&quot;pdk&quot; &gt;
+    &lt;copyfile src=&quot;core/root.mk&quot; dest=&quot;Makefile&quot; /&gt;
+  &lt;/project&gt;
+  &lt;project path=&quot;abi/cpp&quot; name=&quot;platform/abi/cpp&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;art&quot; name=&quot;platform/art&quot; /&gt;
+  &lt;project path=&quot;bionic&quot; name=&quot;platform/bionic&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;bootable/bootloader/legacy&quot; name=&quot;platform/bootable/bootloader/legacy&quot; /&gt;
+  &lt;project path=&quot;bootable/diskinstaller&quot; name=&quot;platform/bootable/diskinstaller&quot; /&gt;
+  &lt;project path=&quot;bootable/recovery&quot; name=&quot;platform/bootable/recovery&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;cts&quot; name=&quot;platform/cts&quot; groups=&quot;cts&quot; /&gt;
+  &lt;project path=&quot;dalvik&quot; name=&quot;platform/dalvik&quot; /&gt;
+  &lt;project path=&quot;developers/build&quot; name=&quot;platform/developers/build&quot; /&gt;
+  &lt;project path=&quot;developers/demos&quot; name=&quot;platform/developers/demos&quot; /&gt;
+  &lt;project path=&quot;developers/docs&quot; name=&quot;platform/developers/docs&quot; /&gt;
+  &lt;project path=&quot;developers/samples/android&quot; name=&quot;platform/developers/samples/android&quot; /&gt;
+  &lt;project path=&quot;development&quot; name=&quot;platform/development&quot; /&gt;
+  &lt;project path=&quot;device/asus/deb&quot; name=&quot;device/asus/deb&quot; groups=&quot;device,flo&quot; /&gt;
+  &lt;project path=&quot;device/asus/flo&quot; name=&quot;device/asus/flo&quot; groups=&quot;device,flo&quot; /&gt;
+  &lt;project path=&quot;device/asus/flo-kernel&quot; name=&quot;device/asus/flo-kernel&quot; groups=&quot;device,flo&quot; /&gt;
+  &lt;project path=&quot;device/asus/grouper&quot; name=&quot;device/asus/grouper&quot; groups=&quot;device,grouper&quot; /&gt;
+  &lt;project path=&quot;device/asus/tilapia&quot; name=&quot;device/asus/tilapia&quot; groups=&quot;device,grouper&quot; /&gt;
+  &lt;project path=&quot;device/common&quot; name=&quot;device/common&quot; /&gt;
+  &lt;project path=&quot;device/generic/armv7-a-neon&quot; name=&quot;device/generic/armv7-a-neon&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;device/generic/common&quot; name=&quot;device/generic/common&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;device/generic/goldfish&quot; name=&quot;device/generic/goldfish&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;device/generic/mips&quot; name=&quot;device/generic/mips&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;device/generic/mini-emulator-armv7-a-neon&quot; name=&quot;device/generic/mini-emulator-armv7-a-neon&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;device/generic/mini-emulator-mips&quot; name=&quot;device/generic/mini-emulator-mips&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;device/generic/mini-emulator-x86&quot; name=&quot;device/generic/mini-emulator-x86&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;device/generic/x86&quot; name=&quot;device/generic/x86&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;device/google/accessory/arduino&quot; name=&quot;device/google/accessory/arduino&quot; groups=&quot;device&quot; /&gt;
+  &lt;project path=&quot;device/google/accessory/demokit&quot; name=&quot;device/google/accessory/demokit&quot; groups=&quot;device&quot; /&gt;
+  &lt;project path=&quot;device/lge/hammerhead&quot; name=&quot;device/lge/hammerhead&quot; groups=&quot;device,hammerhead&quot; /&gt;
+  &lt;project path=&quot;device/lge/hammerhead-kernel&quot; name=&quot;device/lge/hammerhead-kernel&quot; groups=&quot;device,hammerhead&quot; /&gt;
+  &lt;project path=&quot;device/lge/mako&quot; name=&quot;device/lge/mako&quot; groups=&quot;device,mako&quot; /&gt;
+  &lt;project path=&quot;device/lge/mako-kernel&quot; name=&quot;device/lge/mako-kernel&quot; groups=&quot;device,mako&quot; /&gt;
+  &lt;project path=&quot;device/sample&quot; name=&quot;device/sample&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;device/samsung/manta&quot; name=&quot;device/samsung/manta&quot; groups=&quot;device,manta&quot; /&gt;
+  &lt;project path=&quot;docs/source.android.com&quot; name=&quot;platform/docs/source.android.com&quot; /&gt;
+  &lt;project path=&quot;external/aac&quot; name=&quot;platform/external/aac&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/android-clat&quot; name=&quot;platform/external/android-clat&quot; /&gt;
+  &lt;project path=&quot;external/android-mock&quot; name=&quot;platform/external/android-mock&quot; /&gt;
+  &lt;project path=&quot;external/ant-glob&quot; name=&quot;platform/external/ant-glob&quot; /&gt;
+  &lt;project path=&quot;external/antlr&quot; name=&quot;platform/external/antlr&quot; /&gt;
+  &lt;project path=&quot;external/apache-harmony&quot; name=&quot;platform/external/apache-harmony&quot; /&gt;
+  &lt;project path=&quot;external/apache-http&quot; name=&quot;platform/external/apache-http&quot; /&gt;
+  &lt;project path=&quot;external/apache-qp&quot; name=&quot;platform/external/apache-qp&quot; /&gt;
+  &lt;project path=&quot;external/apache-xml&quot; name=&quot;platform/external/apache-xml&quot; /&gt;
+  &lt;project path=&quot;external/arduino&quot; name=&quot;platform/external/arduino&quot; /&gt;
+  &lt;project path=&quot;external/bison&quot; name=&quot;platform/external/bison&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/blktrace&quot; name=&quot;platform/external/blktrace&quot; /&gt;
+  &lt;project path=&quot;external/bluetooth/bluedroid&quot; name=&quot;platform/external/bluetooth/bluedroid&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/bouncycastle&quot; name=&quot;platform/external/bouncycastle&quot; /&gt;
+  &lt;project path=&quot;external/bsdiff&quot; name=&quot;platform/external/bsdiff&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/bzip2&quot; name=&quot;platform/external/bzip2&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/ceres-solver&quot; name=&quot;platform/external/ceres-solver&quot; /&gt;
+  &lt;project path=&quot;external/checkpolicy&quot; name=&quot;platform/external/checkpolicy&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/chromium&quot; name=&quot;platform/external/chromium&quot; /&gt;
+  &lt;project path=&quot;external/chromium-libpac&quot; name=&quot;platform/external/chromium-libpac&quot; /&gt;
+  &lt;project path=&quot;external/chromium-trace&quot; name=&quot;platform/external/chromium-trace&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org&quot; name=&quot;platform/external/chromium_org&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/sdch/open-vcdiff&quot; name=&quot;platform/external/chromium_org/sdch/open-vcdiff&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/testing/gtest&quot; name=&quot;platform/external/chromium_org/testing/gtest&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/third_party/WebKit&quot; name=&quot;platform/external/chromium_org/third_party/WebKit&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/third_party/angle_dx11&quot; name=&quot;platform/external/chromium_org/third_party/angle_dx11&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/third_party/eyesfree/src/android/java/src/com/googlecode/eyesfree/braille&quot; name=&quot;platform/external/chromium_org/third_party/eyesfree/src/android/java/src/com/googlecode/eyesfree/braille&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/third_party/freetype&quot; name=&quot;platform/external/chromium_org/third_party/freetype&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/third_party/icu&quot; name=&quot;platform/external/chromium_org/third_party/icu&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/third_party/leveldatabase/src&quot; name=&quot;platform/external/chromium_org/third_party/leveldatabase/src&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/third_party/libjingle/source/talk&quot; name=&quot;platform/external/chromium_org/third_party/libjingle/source/talk&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/third_party/libphonenumber/src/phonenumbers&quot; name=&quot;platform/external/chromium_org/third_party/libphonenumber/src/phonenumbers&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/third_party/libphonenumber/src/resources&quot; name=&quot;platform/external/chromium_org/third_party/libphonenumber/src/resources&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/third_party/mesa/src&quot; name=&quot;platform/external/chromium_org/third_party/mesa/src&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/third_party/openssl&quot; name=&quot;platform/external/chromium_org/third_party/openssl&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/third_party/opus/src&quot; name=&quot;platform/external/chromium_org/third_party/opus/src&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/third_party/ots&quot; name=&quot;platform/external/chromium_org/third_party/ots&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/third_party/skia/gyp&quot; name=&quot;platform/external/chromium_org/third_party/skia/gyp&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/third_party/skia/include&quot; name=&quot;platform/external/chromium_org/third_party/skia/include&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/third_party/skia/src&quot; name=&quot;platform/external/chromium_org/third_party/skia/src&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/third_party/smhasher/src&quot; name=&quot;platform/external/chromium_org/third_party/smhasher/src&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/third_party/yasm/source/patched-yasm&quot; name=&quot;platform/external/chromium_org/third_party/yasm/source/patched-yasm&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/tools/grit&quot; name=&quot;platform/external/chromium_org/tools/grit&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/tools/gyp&quot; name=&quot;platform/external/chromium_org/tools/gyp&quot; /&gt;
+  &lt;project path=&quot;external/chromium_org/v8&quot; name=&quot;platform/external/chromium_org/v8&quot; /&gt;
+  &lt;project path=&quot;external/clang&quot; name=&quot;platform/external/clang&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/compiler-rt&quot; name=&quot;platform/external/compiler-rt&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/dexmaker&quot; name=&quot;platform/external/dexmaker&quot; /&gt;
+  &lt;project path=&quot;external/dhcpcd&quot; name=&quot;platform/external/dhcpcd&quot; /&gt;
+  &lt;project path=&quot;external/dnsmasq&quot; name=&quot;platform/external/dnsmasq&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/doclava&quot; name=&quot;platform/external/doclava&quot; /&gt;
+  &lt;project path=&quot;external/dropbear&quot; name=&quot;platform/external/dropbear&quot; /&gt;
+  &lt;project path=&quot;external/droiddriver&quot; name=&quot;platform/external/droiddriver&quot; /&gt;
+  &lt;project path=&quot;external/e2fsprogs&quot; name=&quot;platform/external/e2fsprogs&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/easymock&quot; name=&quot;platform/external/easymock&quot; /&gt;
+  &lt;project path=&quot;external/eclipse-basebuilder&quot; name=&quot;platform/external/eclipse-basebuilder&quot; /&gt;
+  &lt;project path=&quot;external/eclipse-windowbuilder&quot; name=&quot;platform/external/eclipse-windowbuilder&quot; /&gt;
+  &lt;project path=&quot;external/eigen&quot; name=&quot;platform/external/eigen&quot; /&gt;
+  &lt;project path=&quot;external/elfutils&quot; name=&quot;platform/external/elfutils&quot; /&gt;
+  &lt;project path=&quot;external/embunit&quot; name=&quot;platform/external/embunit&quot; /&gt;
+  &lt;project path=&quot;external/emma&quot; name=&quot;platform/external/emma&quot; /&gt;
+  &lt;project path=&quot;external/esd&quot; name=&quot;platform/external/esd&quot; /&gt;
+  &lt;project path=&quot;external/expat&quot; name=&quot;platform/external/expat&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/eyes-free&quot; name=&quot;platform/external/eyes-free&quot; /&gt;
+  &lt;project path=&quot;external/fdlibm&quot; name=&quot;platform/external/fdlibm&quot; /&gt;
+  &lt;project path=&quot;external/flac&quot; name=&quot;platform/external/flac&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/freetype&quot; name=&quot;platform/external/freetype&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/fsck_msdos&quot; name=&quot;platform/external/fsck_msdos&quot; /&gt;
+  &lt;project path=&quot;external/ganymed-ssh2&quot; name=&quot;platform/external/ganymed-ssh2&quot; /&gt;
+  &lt;project path=&quot;external/gcc-demangle&quot; name=&quot;platform/external/gcc-demangle&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/genext2fs&quot; name=&quot;platform/external/genext2fs&quot; /&gt;
+  &lt;project path=&quot;external/giflib&quot; name=&quot;platform/external/giflib&quot; /&gt;
+  &lt;project path=&quot;external/google-diff-match-patch&quot; name=&quot;platform/external/google-diff-match-patch&quot; /&gt;
+  &lt;project path=&quot;external/grub&quot; name=&quot;platform/external/grub&quot; /&gt;
+  &lt;project path=&quot;external/gtest&quot; name=&quot;platform/external/gtest&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/guava&quot; name=&quot;platform/external/guava&quot; /&gt;
+  &lt;project path=&quot;external/hamcrest&quot; name=&quot;platform/external/hamcrest&quot; /&gt;
+  &lt;project path=&quot;external/harfbuzz&quot; name=&quot;platform/external/harfbuzz&quot; /&gt;
+  &lt;project path=&quot;external/harfbuzz_ng&quot; name=&quot;platform/external/harfbuzz_ng&quot; /&gt;
+  &lt;project path=&quot;external/hyphenation&quot; name=&quot;platform/external/hyphenation&quot; /&gt;
+  &lt;project path=&quot;external/icu4c&quot; name=&quot;platform/external/icu4c&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/iproute2&quot; name=&quot;platform/external/iproute2&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/ipsec-tools&quot; name=&quot;platform/external/ipsec-tools&quot; /&gt;
+  &lt;project path=&quot;external/iptables&quot; name=&quot;platform/external/iptables&quot; /&gt;
+  &lt;project path=&quot;external/iputils&quot; name=&quot;platform/external/iputils&quot; /&gt;
+  &lt;project path=&quot;external/jack&quot; name=&quot;platform/external/jack&quot; /&gt;
+  &lt;project path=&quot;external/javasqlite&quot; name=&quot;platform/external/javasqlite&quot; /&gt;
+  &lt;project path=&quot;external/javassist&quot; name=&quot;platform/external/javassist&quot; /&gt;
+  &lt;project path=&quot;external/jdiff&quot; name=&quot;platform/external/jdiff&quot; /&gt;
+  &lt;project path=&quot;external/jhead&quot; name=&quot;platform/external/jhead&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/jmdns&quot; name=&quot;platform/external/jmdns&quot; /&gt;
+  &lt;project path=&quot;external/jmonkeyengine&quot; name=&quot;platform/external/jmonkeyengine&quot; /&gt;
+  &lt;project path=&quot;external/jpeg&quot; name=&quot;platform/external/jpeg&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/jsilver&quot; name=&quot;platform/external/jsilver&quot; /&gt;
+  &lt;project path=&quot;external/jsr305&quot; name=&quot;platform/external/jsr305&quot; /&gt;
+  &lt;project path=&quot;external/junit&quot; name=&quot;platform/external/junit&quot; /&gt;
+  &lt;project path=&quot;external/kernel-headers&quot; name=&quot;platform/external/kernel-headers&quot; /&gt;
+  &lt;project path=&quot;external/libcap-ng&quot; name=&quot;platform/external/libcap-ng&quot; /&gt;
+  &lt;project path=&quot;external/libffi&quot; name=&quot;platform/external/libffi&quot; /&gt;
+  &lt;project path=&quot;external/libgsm&quot; name=&quot;platform/external/libgsm&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/liblzf&quot; name=&quot;platform/external/liblzf&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/libmtp&quot; name=&quot;platform/external/libmtp&quot; /&gt;
+  &lt;project path=&quot;external/libnfc-nci&quot; name=&quot;platform/external/libnfc-nci&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/libnfc-nxp&quot; name=&quot;platform/external/libnfc-nxp&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/libnl-headers&quot; name=&quot;platform/external/libnl-headers&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/libogg&quot; name=&quot;platform/external/libogg&quot; /&gt;
+  &lt;project path=&quot;external/libpcap&quot; name=&quot;platform/external/libpcap&quot; /&gt;
+  &lt;project path=&quot;external/libphonenumber&quot; name=&quot;platform/external/libphonenumber&quot; /&gt;
+  &lt;project path=&quot;external/libpng&quot; name=&quot;platform/external/libpng&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/libppp&quot; name=&quot;platform/external/libppp&quot; /&gt;
+  &lt;project path=&quot;external/libselinux&quot; name=&quot;platform/external/libselinux&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/libsepol&quot; name=&quot;platform/external/libsepol&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/libusb&quot; name=&quot;platform/external/libusb&quot; /&gt;
+  &lt;project path=&quot;external/libusb-compat&quot; name=&quot;platform/external/libusb-compat&quot; /&gt;
+  &lt;project path=&quot;external/libvorbis&quot; name=&quot;platform/external/libvorbis&quot; /&gt;
+  &lt;project path=&quot;external/libvpx&quot; name=&quot;platform/external/libvpx&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/libxml2&quot; name=&quot;platform/external/libxml2&quot; /&gt;
+  &lt;project path=&quot;external/libxslt&quot; name=&quot;platform/external/libxslt&quot; /&gt;
+  &lt;project path=&quot;external/libyuv&quot; name=&quot;platform/external/libyuv&quot; groups=&quot;libyuv&quot; /&gt;
+  &lt;project path=&quot;external/linux-tools-perf&quot; name=&quot;platform/external/linux-tools-perf&quot; /&gt;
+  &lt;project path=&quot;external/littlemock&quot; name=&quot;platform/external/littlemock&quot; /&gt;
+  &lt;project path=&quot;external/llvm&quot; name=&quot;platform/external/llvm&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/lzma&quot; name=&quot;platform/external/lzma&quot; /&gt;
+  &lt;project path=&quot;external/marisa-trie&quot; name=&quot;platform/external/marisa-trie&quot; /&gt;
+  &lt;project path=&quot;external/markdown&quot; name=&quot;platform/external/markdown&quot; /&gt;
+  &lt;project path=&quot;external/mdnsresponder&quot; name=&quot;platform/external/mdnsresponder&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/mesa3d&quot; name=&quot;platform/external/mesa3d&quot; /&gt;
+  &lt;project path=&quot;external/mksh&quot; name=&quot;platform/external/mksh&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/mockito&quot; name=&quot;platform/external/mockito&quot; /&gt;
+  &lt;project path=&quot;external/mockwebserver&quot; name=&quot;platform/external/mockwebserver&quot; /&gt;
+  &lt;project path=&quot;external/mp4parser&quot; name=&quot;platform/external/mp4parser&quot; /&gt;
+  &lt;project path=&quot;external/mtpd&quot; name=&quot;platform/external/mtpd&quot; /&gt;
+  &lt;project path=&quot;external/naver-fonts&quot; name=&quot;platform/external/naver-fonts&quot; /&gt;
+  &lt;project path=&quot;external/netcat&quot; name=&quot;platform/external/netcat&quot; /&gt;
+  &lt;project path=&quot;external/netperf&quot; name=&quot;platform/external/netperf&quot; /&gt;
+  &lt;project path=&quot;external/neven&quot; name=&quot;platform/external/neven&quot; /&gt;
+  &lt;project path=&quot;external/nist-pkits&quot; name=&quot;platform/external/nist-pkits&quot; /&gt;
+  &lt;project path=&quot;external/nist-sip&quot; name=&quot;platform/external/nist-sip&quot; /&gt;
+  &lt;project path=&quot;external/noto-fonts&quot; name=&quot;platform/external/noto-fonts&quot; /&gt;
+  &lt;project path=&quot;external/oauth&quot; name=&quot;platform/external/oauth&quot; /&gt;
+  &lt;project path=&quot;external/objenesis&quot; name=&quot;platform/external/objenesis&quot; /&gt;
+  &lt;project path=&quot;external/okhttp&quot; name=&quot;platform/external/okhttp&quot; /&gt;
+  &lt;project path=&quot;external/open-vcdiff&quot; name=&quot;platform/external/open-vcdiff&quot; /&gt;
+  &lt;project path=&quot;external/opencv&quot; name=&quot;platform/external/opencv&quot; /&gt;
+  &lt;project path=&quot;external/openfst&quot; name=&quot;platform/external/openfst&quot; /&gt;
+  &lt;project path=&quot;external/openssh&quot; name=&quot;platform/external/openssh&quot; /&gt;
+  &lt;project path=&quot;external/openssl&quot; name=&quot;platform/external/openssl&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/oprofile&quot; name=&quot;platform/external/oprofile&quot; /&gt;
+  &lt;project path=&quot;external/pixman&quot; name=&quot;platform/external/pixman&quot; /&gt;
+  &lt;project path=&quot;external/ppp&quot; name=&quot;platform/external/ppp&quot; /&gt;
+  &lt;project path=&quot;external/proguard&quot; name=&quot;platform/external/proguard&quot; groups=&quot;pdk-java&quot; /&gt;
+  &lt;project path=&quot;external/protobuf&quot; name=&quot;platform/external/protobuf&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/qemu&quot; name=&quot;platform/external/qemu&quot; /&gt;
+  &lt;project path=&quot;external/qemu-pc-bios&quot; name=&quot;platform/external/qemu-pc-bios&quot; /&gt;
+  &lt;project path=&quot;external/regex-re2&quot; name=&quot;platform/external/regex-re2&quot; /&gt;
+  &lt;project path=&quot;external/replicaisland&quot; name=&quot;platform/external/replicaisland&quot; /&gt;
+  &lt;project path=&quot;external/robolectric&quot; name=&quot;platform/external/robolectric&quot; /&gt;
+  &lt;project path=&quot;external/safe-iop&quot; name=&quot;platform/external/safe-iop&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/scrypt&quot; name=&quot;platform/external/scrypt&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/sepolicy&quot; name=&quot;platform/external/sepolicy&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/sfntly&quot; name=&quot;platform/external/sfntly&quot; /&gt;
+  &lt;project path=&quot;external/sil-fonts&quot; name=&quot;platform/external/sil-fonts&quot; /&gt;
+  &lt;project path=&quot;external/skia&quot; name=&quot;platform/external/skia&quot; /&gt;
+  &lt;project path=&quot;external/smack&quot; name=&quot;platform/external/smack&quot; /&gt;
+  &lt;project path=&quot;external/smali&quot; name=&quot;platform/external/smali&quot; /&gt;
+  &lt;project path=&quot;external/sonivox&quot; name=&quot;platform/external/sonivox&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/speex&quot; name=&quot;platform/external/speex&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/sqlite&quot; name=&quot;platform/external/sqlite&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/srec&quot; name=&quot;platform/external/srec&quot; /&gt;
+  &lt;project path=&quot;external/srtp&quot; name=&quot;platform/external/srtp&quot; /&gt;
+  &lt;project path=&quot;external/stlport&quot; name=&quot;platform/external/stlport&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/strace&quot; name=&quot;platform/external/strace&quot; /&gt;
+  &lt;project path=&quot;external/stressapptest&quot; name=&quot;platform/external/stressapptest&quot; /&gt;
+  &lt;project path=&quot;external/svox&quot; name=&quot;platform/external/svox&quot; /&gt;
+  &lt;project path=&quot;external/tagsoup&quot; name=&quot;platform/external/tagsoup&quot; /&gt;
+  &lt;project path=&quot;external/tcpdump&quot; name=&quot;platform/external/tcpdump&quot; /&gt;
+  &lt;project path=&quot;external/timezonepicker-support&quot; name=&quot;platform/external/timezonepicker-support&quot; /&gt;
+  &lt;project path=&quot;external/tinyalsa&quot; name=&quot;platform/external/tinyalsa&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/tinycompress&quot; name=&quot;platform/external/tinycompress&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/tinyxml&quot; name=&quot;platform/external/tinyxml&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/tinyxml2&quot; name=&quot;platform/external/tinyxml2&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/tremolo&quot; name=&quot;platform/external/tremolo&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/v8&quot; name=&quot;platform/external/v8&quot; /&gt;
+  &lt;project path=&quot;external/valgrind&quot; name=&quot;platform/external/valgrind&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/webp&quot; name=&quot;platform/external/webp&quot; /&gt;
+  &lt;project path=&quot;external/webrtc&quot; name=&quot;platform/external/webrtc&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/wpa_supplicant_8&quot; name=&quot;platform/external/wpa_supplicant_8&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/xmlwriter&quot; name=&quot;platform/external/xmlwriter&quot; /&gt;
+  &lt;project path=&quot;external/xmp_toolkit&quot; name=&quot;platform/external/xmp_toolkit&quot; /&gt;
+  &lt;project path=&quot;external/yaffs2&quot; name=&quot;platform/external/yaffs2&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/zlib&quot; name=&quot;platform/external/zlib&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;external/zxing&quot; name=&quot;platform/external/zxing&quot; /&gt;
+  &lt;project path=&quot;frameworks/av&quot; name=&quot;platform/frameworks/av&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;frameworks/base&quot; name=&quot;platform/frameworks/base&quot; /&gt;
+  &lt;project path=&quot;frameworks/compile/libbcc&quot; name=&quot;platform/frameworks/compile/libbcc&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;frameworks/compile/mclinker&quot; name=&quot;platform/frameworks/compile/mclinker&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;frameworks/compile/slang&quot; name=&quot;platform/frameworks/compile/slang&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;frameworks/ex&quot; name=&quot;platform/frameworks/ex&quot; /&gt;
+  &lt;project path=&quot;frameworks/mff&quot; name=&quot;platform/frameworks/mff&quot; /&gt;
+  &lt;project path=&quot;frameworks/ml&quot; name=&quot;platform/frameworks/ml&quot; /&gt;
+  &lt;project path=&quot;frameworks/native&quot; name=&quot;platform/frameworks/native&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;frameworks/opt/calendar&quot; name=&quot;platform/frameworks/opt/calendar&quot; /&gt;
+  &lt;project path=&quot;frameworks/opt/carddav&quot; name=&quot;platform/frameworks/opt/carddav&quot; /&gt;
+  &lt;project path=&quot;frameworks/opt/colorpicker&quot; name=&quot;platform/frameworks/opt/colorpicker&quot; /&gt;
+  &lt;project path=&quot;frameworks/opt/datetimepicker&quot; name=&quot;platform/frameworks/opt/datetimepicker&quot; /&gt;
+  &lt;project path=&quot;frameworks/opt/emoji&quot; name=&quot;platform/frameworks/opt/emoji&quot; /&gt;
+  &lt;project path=&quot;frameworks/opt/inputmethodcommon&quot; name=&quot;platform/frameworks/opt/inputmethodcommon&quot; /&gt;
+  &lt;project path=&quot;frameworks/opt/mailcommon&quot; name=&quot;platform/frameworks/opt/mailcommon&quot; /&gt;
+  &lt;project path=&quot;frameworks/opt/mms&quot; name=&quot;platform/frameworks/opt/mms&quot; /&gt;
+  &lt;project path=&quot;frameworks/opt/net/voip&quot; name=&quot;platform/frameworks/opt/net/voip&quot; /&gt;
+  &lt;project path=&quot;frameworks/opt/photoviewer&quot; name=&quot;platform/frameworks/opt/photoviewer&quot; /&gt;
+  &lt;project path=&quot;frameworks/opt/timezonepicker&quot; name=&quot;platform/frameworks/opt/timezonepicker&quot; /&gt;
+  &lt;project path=&quot;frameworks/opt/telephony&quot; name=&quot;platform/frameworks/opt/telephony&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;frameworks/opt/vcard&quot; name=&quot;platform/frameworks/opt/vcard&quot; /&gt;
+  &lt;project path=&quot;frameworks/rs&quot; name=&quot;platform/frameworks/rs&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;frameworks/support&quot; name=&quot;platform/frameworks/support&quot; /&gt;
+  &lt;project path=&quot;frameworks/testing&quot; name=&quot;platform/frameworks/testing&quot; /&gt;
+  &lt;project path=&quot;frameworks/uiautomator&quot; name=&quot;platform/frameworks/uiautomator&quot; /&gt;
+  &lt;project path=&quot;frameworks/volley&quot; name=&quot;platform/frameworks/volley&quot; /&gt;
+  &lt;project path=&quot;frameworks/webview&quot; name=&quot;platform/frameworks/webview&quot; /&gt;
+  &lt;project path=&quot;frameworks/wilhelm&quot; name=&quot;platform/frameworks/wilhelm&quot; /&gt;
+  &lt;project path=&quot;hardware/akm&quot; name=&quot;platform/hardware/akm&quot; /&gt;
+  &lt;project path=&quot;hardware/broadcom/libbt&quot; name=&quot;platform/hardware/broadcom/libbt&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;hardware/broadcom/wlan&quot; name=&quot;platform/hardware/broadcom/wlan&quot; groups=&quot;broadcom_wlan&quot; /&gt;
+  &lt;project path=&quot;hardware/invensense&quot; name=&quot;platform/hardware/invensense&quot; groups=&quot;invensense&quot; /&gt;
+  &lt;project path=&quot;hardware/libhardware&quot; name=&quot;platform/hardware/libhardware&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;hardware/libhardware_legacy&quot; name=&quot;platform/hardware/libhardware_legacy&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;hardware/qcom/audio&quot; name=&quot;platform/hardware/qcom/audio&quot; groups=&quot;qcom&quot; /&gt;
+  &lt;project path=&quot;hardware/qcom/bt&quot; name=&quot;platform/hardware/qcom/bt&quot; groups=&quot;qcom&quot; /&gt;
+  &lt;project path=&quot;hardware/qcom/camera&quot; name=&quot;platform/hardware/qcom/camera&quot; groups=&quot;qcom&quot; /&gt;
+  &lt;project path=&quot;hardware/qcom/display&quot; name=&quot;platform/hardware/qcom/display&quot; groups=&quot;qcom&quot; /&gt;
+  &lt;project path=&quot;hardware/qcom/keymaster&quot; name=&quot;platform/hardware/qcom/keymaster&quot; groups=&quot;qcom&quot; /&gt;
+  &lt;project path=&quot;hardware/qcom/media&quot; name=&quot;platform/hardware/qcom/media&quot; groups=&quot;qcom&quot; /&gt;
+  &lt;project path=&quot;hardware/qcom/msm8960&quot; name=&quot;platform/hardware/qcom/msm8960&quot; groups=&quot;qcom_msm8960&quot; /&gt;
+  &lt;project path=&quot;hardware/qcom/msm8x74&quot; name=&quot;platform/hardware/qcom/msm8x74&quot; groups=&quot;qcom_msm8x74&quot; /&gt;
+  &lt;project path=&quot;hardware/qcom/power&quot; name=&quot;platform/hardware/qcom/power&quot; groups=&quot;qcom&quot; /&gt;
+  &lt;project path=&quot;hardware/qcom/sensors&quot; name=&quot;platform/hardware/qcom/sensors&quot; groups=&quot;qcom&quot; /&gt;
+  &lt;project path=&quot;hardware/qcom/wlan&quot; name=&quot;platform/hardware/qcom/wlan&quot; groups=&quot;qcom_wlan&quot; /&gt;
+  &lt;project path=&quot;hardware/ril&quot; name=&quot;platform/hardware/ril&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;hardware/samsung_slsi/exynos5&quot; name=&quot;platform/hardware/samsung_slsi/exynos5&quot; groups=&quot;exynos5&quot; /&gt;
+  &lt;project path=&quot;hardware/ti/omap3&quot; name=&quot;platform/hardware/ti/omap3&quot; /&gt;
+  &lt;project path=&quot;hardware/ti/omap4xxx&quot; name=&quot;platform/hardware/ti/omap4xxx&quot; groups=&quot;omap4&quot; /&gt;
+  &lt;project path=&quot;hardware/ti/wlan&quot; name=&quot;platform/hardware/ti/wlan&quot; /&gt;
+  &lt;project path=&quot;hardware/ti/wpan&quot; name=&quot;platform/hardware/ti/wpan&quot; /&gt;
+  &lt;project path=&quot;libcore&quot; name=&quot;platform/libcore&quot; /&gt;
+  &lt;project path=&quot;libnativehelper&quot; name=&quot;platform/libnativehelper&quot; groups=&quot;pdk-java&quot; /&gt;
+  &lt;project path=&quot;ndk&quot; name=&quot;platform/ndk&quot; /&gt;
+  &lt;project path=&quot;packages/apps/BasicSmsReceiver&quot; name=&quot;platform/packages/apps/BasicSmsReceiver&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Bluetooth&quot; name=&quot;platform/packages/apps/Bluetooth&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Browser&quot; name=&quot;platform/packages/apps/Browser&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Calculator&quot; name=&quot;platform/packages/apps/Calculator&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Calendar&quot; name=&quot;platform/packages/apps/Calendar&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Camera&quot; name=&quot;platform/packages/apps/Camera&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Camera2&quot; name=&quot;platform/packages/apps/Camera2&quot; /&gt;
+  &lt;project path=&quot;packages/apps/CellBroadcastReceiver&quot; name=&quot;platform/packages/apps/CellBroadcastReceiver&quot; /&gt;
+  &lt;project path=&quot;packages/apps/CertInstaller&quot; name=&quot;platform/packages/apps/CertInstaller&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Contacts&quot; name=&quot;platform/packages/apps/Contacts&quot; /&gt;
+  &lt;project path=&quot;packages/apps/ContactsCommon&quot; name=&quot;platform/packages/apps/ContactsCommon&quot; /&gt;
+  &lt;project path=&quot;packages/apps/DeskClock&quot; name=&quot;platform/packages/apps/DeskClock&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Dialer&quot; name=&quot;platform/packages/apps/Dialer&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Email&quot; name=&quot;platform/packages/apps/Email&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Exchange&quot; name=&quot;platform/packages/apps/Exchange&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Gallery&quot; name=&quot;platform/packages/apps/Gallery&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Gallery2&quot; name=&quot;platform/packages/apps/Gallery2&quot; /&gt;
+  &lt;project path=&quot;packages/apps/HTMLViewer&quot; name=&quot;platform/packages/apps/HTMLViewer&quot; /&gt;
+  &lt;project path=&quot;packages/apps/InCallUI&quot; name=&quot;platform/packages/apps/InCallUI&quot; /&gt;
+  &lt;project path=&quot;packages/apps/KeyChain&quot; name=&quot;platform/packages/apps/KeyChain&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Launcher2&quot; name=&quot;platform/packages/apps/Launcher2&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Launcher3&quot; name=&quot;platform/packages/apps/Launcher3&quot; /&gt;
+  &lt;project path=&quot;packages/apps/LegacyCamera&quot; name=&quot;platform/packages/apps/LegacyCamera&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Mms&quot; name=&quot;platform/packages/apps/Mms&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Music&quot; name=&quot;platform/packages/apps/Music&quot; /&gt;
+  &lt;project path=&quot;packages/apps/MusicFX&quot; name=&quot;platform/packages/apps/MusicFX&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Nfc&quot; name=&quot;platform/packages/apps/Nfc&quot; /&gt;
+  &lt;project path=&quot;packages/apps/OneTimeInitializer&quot; name=&quot;platform/packages/apps/OneTimeInitializer&quot; /&gt;
+  &lt;project path=&quot;packages/apps/PackageInstaller&quot; name=&quot;platform/packages/apps/PackageInstaller&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Phone&quot; name=&quot;platform/packages/apps/Phone&quot; /&gt;
+  &lt;project path=&quot;packages/apps/PhoneCommon&quot; name=&quot;platform/packages/apps/PhoneCommon&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Protips&quot; name=&quot;platform/packages/apps/Protips&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Provision&quot; name=&quot;platform/packages/apps/Provision&quot; /&gt;
+  &lt;project path=&quot;packages/apps/QuickSearchBox&quot; name=&quot;platform/packages/apps/QuickSearchBox&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Settings&quot; name=&quot;platform/packages/apps/Settings&quot; /&gt;
+  &lt;project path=&quot;packages/apps/SmartCardService&quot; name=&quot;platform/packages/apps/SmartCardService&quot; /&gt;
+  &lt;project path=&quot;packages/apps/SoundRecorder&quot; name=&quot;platform/packages/apps/SoundRecorder&quot; /&gt;
+  &lt;project path=&quot;packages/apps/SpareParts&quot; name=&quot;platform/packages/apps/SpareParts&quot; /&gt;
+  &lt;project path=&quot;packages/apps/SpeechRecorder&quot; name=&quot;platform/packages/apps/SpeechRecorder&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Stk&quot; name=&quot;platform/packages/apps/Stk&quot; /&gt;
+  &lt;project path=&quot;packages/apps/Tag&quot; name=&quot;platform/packages/apps/Tag&quot; /&gt;
+  &lt;project path=&quot;packages/apps/UnifiedEmail&quot; name=&quot;platform/packages/apps/UnifiedEmail&quot; /&gt;
+  &lt;project path=&quot;packages/apps/VideoEditor&quot; name=&quot;platform/packages/apps/VideoEditor&quot; /&gt;
+  &lt;project path=&quot;packages/apps/VoiceDialer&quot; name=&quot;platform/packages/apps/VoiceDialer&quot; /&gt;
+  &lt;project path=&quot;packages/experimental&quot; name=&quot;platform/packages/experimental&quot; /&gt;
+  &lt;project path=&quot;packages/inputmethods/LatinIME&quot; name=&quot;platform/packages/inputmethods/LatinIME&quot; /&gt;
+  &lt;project path=&quot;packages/inputmethods/OpenWnn&quot; name=&quot;platform/packages/inputmethods/OpenWnn&quot; /&gt;
+  &lt;project path=&quot;packages/inputmethods/PinyinIME&quot; name=&quot;platform/packages/inputmethods/PinyinIME&quot; /&gt;
+  &lt;project path=&quot;packages/providers/ApplicationsProvider&quot; name=&quot;platform/packages/providers/ApplicationsProvider&quot; /&gt;
+  &lt;project path=&quot;packages/providers/CalendarProvider&quot; name=&quot;platform/packages/providers/CalendarProvider&quot; /&gt;
+  &lt;project path=&quot;packages/providers/ContactsProvider&quot; name=&quot;platform/packages/providers/ContactsProvider&quot; /&gt;
+  &lt;project path=&quot;packages/providers/DownloadProvider&quot; name=&quot;platform/packages/providers/DownloadProvider&quot; /&gt;
+  &lt;project path=&quot;packages/providers/MediaProvider&quot; name=&quot;platform/packages/providers/MediaProvider&quot; /&gt;
+  &lt;project path=&quot;packages/providers/PartnerBookmarksProvider&quot; name=&quot;platform/packages/providers/PartnerBookmarksProvider&quot; /&gt;
+  &lt;project path=&quot;packages/providers/TelephonyProvider&quot; name=&quot;platform/packages/providers/TelephonyProvider&quot; /&gt;
+  &lt;project path=&quot;packages/providers/UserDictionaryProvider&quot; name=&quot;platform/packages/providers/UserDictionaryProvider&quot; /&gt;
+  &lt;project path=&quot;packages/screensavers/Basic&quot; name=&quot;platform/packages/screensavers/Basic&quot; /&gt;
+  &lt;project path=&quot;packages/screensavers/PhotoTable&quot; name=&quot;platform/packages/screensavers/PhotoTable&quot; /&gt;
+  &lt;project path=&quot;packages/screensavers/WebView&quot; name=&quot;platform/packages/screensavers/WebView&quot; /&gt;
+  &lt;project path=&quot;packages/services/Telephony&quot; name=&quot;platform/packages/services/Telephony&quot; /&gt;
+  &lt;project path=&quot;packages/wallpapers/Basic&quot; name=&quot;platform/packages/wallpapers/Basic&quot; /&gt;
+  &lt;project path=&quot;packages/wallpapers/Galaxy4&quot; name=&quot;platform/packages/wallpapers/Galaxy4&quot; /&gt;
+  &lt;project path=&quot;packages/wallpapers/HoloSpiral&quot; name=&quot;platform/packages/wallpapers/HoloSpiral&quot; /&gt;
+  &lt;project path=&quot;packages/wallpapers/LivePicker&quot; name=&quot;platform/packages/wallpapers/LivePicker&quot; /&gt;
+  &lt;project path=&quot;packages/wallpapers/MagicSmoke&quot; name=&quot;platform/packages/wallpapers/MagicSmoke&quot; /&gt;
+  &lt;project path=&quot;packages/wallpapers/MusicVisualization&quot; name=&quot;platform/packages/wallpapers/MusicVisualization&quot; /&gt;
+  &lt;project path=&quot;packages/wallpapers/NoiseField&quot; name=&quot;platform/packages/wallpapers/NoiseField&quot; /&gt;
+  &lt;project path=&quot;packages/wallpapers/PhaseBeam&quot; name=&quot;platform/packages/wallpapers/PhaseBeam&quot; /&gt;
+  &lt;project path=&quot;pdk&quot; name=&quot;platform/pdk&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;prebuilts/clang/darwin-x86/3.1&quot; name=&quot;platform/prebuilts/clang/darwin-x86/3.1&quot; groups=&quot;pdk,darwin&quot; /&gt;
+  &lt;project path=&quot;prebuilts/clang/darwin-x86/3.2&quot; name=&quot;platform/prebuilts/clang/darwin-x86/3.2&quot; groups=&quot;pdk,darwin&quot; /&gt;
+  &lt;project path=&quot;prebuilts/clang/darwin-x86/arm/3.3&quot; name=&quot;platform/prebuilts/clang/darwin-x86/arm/3.3&quot; groups=&quot;darwin,arm&quot; /&gt;
+  &lt;project path=&quot;prebuilts/clang/darwin-x86/host/3.3&quot; name=&quot;platform/prebuilts/clang/darwin-x86/host/3.3&quot; groups=&quot;darwin&quot; /&gt;
+  &lt;project path=&quot;prebuilts/clang/darwin-x86/mips/3.3&quot; name=&quot;platform/prebuilts/clang/darwin-x86/mips/3.3&quot; groups=&quot;darwin,mips&quot; /&gt;
+  &lt;project path=&quot;prebuilts/clang/darwin-x86/x86/3.3&quot; name=&quot;platform/prebuilts/clang/darwin-x86/x86/3.3&quot; groups=&quot;darwin,x86&quot; /&gt;
+  &lt;project path=&quot;prebuilts/clang/linux-x86/3.1&quot; name=&quot;platform/prebuilts/clang/linux-x86/3.1&quot; groups=&quot;pdk,linux&quot; /&gt;
+  &lt;project path=&quot;prebuilts/clang/linux-x86/3.2&quot; name=&quot;platform/prebuilts/clang/linux-x86/3.2&quot; groups=&quot;pdk,linux&quot; /&gt;
+  &lt;project path=&quot;prebuilts/clang/linux-x86/arm/3.3&quot; name=&quot;platform/prebuilts/clang/linux-x86/arm/3.3&quot; groups=&quot;linux,arm&quot; /&gt;
+  &lt;project path=&quot;prebuilts/clang/linux-x86/host/3.3&quot; name=&quot;platform/prebuilts/clang/linux-x86/host/3.3&quot; groups=&quot;linux&quot; /&gt;
+  &lt;project path=&quot;prebuilts/clang/linux-x86/mips/3.3&quot; name=&quot;platform/prebuilts/clang/linux-x86/mips/3.3&quot; groups=&quot;linux,mips&quot; /&gt;
+  &lt;project path=&quot;prebuilts/clang/linux-x86/x86/3.3&quot; name=&quot;platform/prebuilts/clang/linux-x86/x86/3.3&quot; groups=&quot;linux,x86&quot; /&gt;
+  &lt;project path=&quot;prebuilts/devtools&quot; name=&quot;platform/prebuilts/devtools&quot; /&gt;
+  &lt;project path=&quot;prebuilts/eclipse&quot; name=&quot;platform/prebuilts/eclipse&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;prebuilts/eclipse-build-deps&quot; name=&quot;platform/prebuilts/eclipse-build-deps&quot; groups=&quot;notdefault,eclipse&quot; /&gt;
+  &lt;project path=&quot;prebuilts/eclipse-build-deps-sources&quot; name=&quot;platform/prebuilts/eclipse-build-deps-sources&quot; groups=&quot;notdefault,eclipse&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/darwin-x86/arm/arm-eabi-4.6&quot; name=&quot;platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.6&quot; groups=&quot;pdk,darwin,arm&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7&quot; name=&quot;platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7&quot; groups=&quot;pdk,darwin,arm&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.6&quot; name=&quot;platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.6&quot; groups=&quot;pdk,darwin,arm&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.7&quot; name=&quot;platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.7&quot; groups=&quot;pdk,darwin,arm&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/darwin-x86/host/headers&quot; name=&quot;platform/prebuilts/gcc/darwin-x86/host/headers&quot; groups=&quot;pdk,darwin&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1&quot; name=&quot;platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1&quot; groups=&quot;pdk,darwin&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/darwin-x86/mips/mipsel-linux-android-4.6&quot; name=&quot;platform/prebuilts/gcc/darwin-x86/mips/mipsel-linux-android-4.6&quot; groups=&quot;pdk,darwin,mips&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/darwin-x86/mips/mipsel-linux-android-4.7&quot; name=&quot;platform/prebuilts/gcc/darwin-x86/mips/mipsel-linux-android-4.7&quot; groups=&quot;pdk,darwin,mips&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.6&quot; name=&quot;platform/prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.6&quot; groups=&quot;pdk,darwin,x86&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.7&quot; name=&quot;platform/prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.7&quot; groups=&quot;pdk,darwin,x86&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.7&quot; name=&quot;platform/prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.7&quot; groups=&quot;pdk,darwin,x86&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/linux-x86/arm/arm-eabi-4.6&quot; name=&quot;platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.6&quot; groups=&quot;pdk,linux,arm&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/linux-x86/arm/arm-eabi-4.7&quot; name=&quot;platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7&quot; groups=&quot;pdk,linux,arm&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6&quot; name=&quot;platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6&quot; groups=&quot;pdk,linux,arm&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7&quot; name=&quot;platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7&quot; groups=&quot;pdk,linux,arm&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.4.3&quot; name=&quot;platform/prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.4.3&quot; groups=&quot;pdk,linux&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6&quot; name=&quot;platform/prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6&quot; groups=&quot;pdk,linux&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6&quot; name=&quot;platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6&quot; groups=&quot;pdk,linux&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/linux-x86/mips/mipsel-linux-android-4.6&quot; name=&quot;platform/prebuilts/gcc/linux-x86/mips/mipsel-linux-android-4.6&quot; groups=&quot;pdk,linux,mips&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/linux-x86/mips/mipsel-linux-android-4.7&quot; name=&quot;platform/prebuilts/gcc/linux-x86/mips/mipsel-linux-android-4.7&quot; groups=&quot;pdk,linux,mips&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/linux-x86/x86/i686-linux-android-4.6&quot; name=&quot;platform/prebuilts/gcc/linux-x86/x86/i686-linux-android-4.6&quot; groups=&quot;pdk,linux,x86&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/linux-x86/x86/i686-linux-android-4.7&quot; name=&quot;platform/prebuilts/gcc/linux-x86/x86/i686-linux-android-4.7&quot; groups=&quot;pdk,linux,x86&quot; /&gt;
+  &lt;project path=&quot;prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.7&quot; name=&quot;platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.7&quot; groups=&quot;pdk,linux,x86&quot; /&gt;
+  &lt;project path=&quot;prebuilts/misc&quot; name=&quot;platform/prebuilts/misc&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;prebuilts/ndk&quot; name=&quot;platform/prebuilts/ndk&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;prebuilts/python/darwin-x86/2.7.5&quot; name=&quot;platform/prebuilts/python/darwin-x86/2.7.5&quot; groups=&quot;darwin&quot; /&gt;
+  &lt;project path=&quot;prebuilts/python/linux-x86/2.7.5&quot; name=&quot;platform/prebuilts/python/linux-x86/2.7.5&quot; groups=&quot;linux&quot; /&gt;
+  &lt;project path=&quot;prebuilts/qemu-kernel&quot; name=&quot;platform/prebuilts/qemu-kernel&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;prebuilts/runtime&quot; name=&quot;platform/prebuilts/runtime&quot; /&gt;
+  &lt;project path=&quot;prebuilts/sdk&quot; name=&quot;platform/prebuilts/sdk&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;prebuilts/tools&quot; name=&quot;platform/prebuilts/tools&quot; groups=&quot;pdk,tools&quot; /&gt;
+  &lt;project path=&quot;sdk&quot; name=&quot;platform/sdk&quot; /&gt;
+  &lt;project path=&quot;system/core&quot; name=&quot;platform/system/core&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;system/extras&quot; name=&quot;platform/system/extras&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;system/media&quot; name=&quot;platform/system/media&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;system/netd&quot; name=&quot;platform/system/netd&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;system/security&quot; name=&quot;platform/system/security&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;system/vold&quot; name=&quot;platform/system/vold&quot; groups=&quot;pdk&quot; /&gt;
+  &lt;project path=&quot;tools/adt/eclipse&quot; name=&quot;platform/tools/adt/eclipse&quot; groups=&quot;notdefault,tools&quot; /&gt;
+  &lt;project path=&quot;tools/adt/idea&quot; name=&quot;platform/tools/adt/idea&quot; groups=&quot;notdefault,tools&quot; /&gt;
+  &lt;project path=&quot;tools/base&quot; name=&quot;platform/tools/base&quot; groups=&quot;notdefault,tools&quot; /&gt;
+  &lt;project path=&quot;tools/build&quot; name=&quot;platform/tools/build&quot; groups=&quot;notdefault,tools&quot; /&gt;
+  &lt;project path=&quot;tools/emulator&quot; name=&quot;platform/tools/emulator&quot; groups=&quot;notdefault,tools&quot; /&gt;
+  &lt;project path=&quot;tools/external/fat32lib&quot; name=&quot;platform/tools/external/fat32lib&quot; groups=&quot;tools&quot; /&gt;
+  &lt;project path=&quot;tools/external/gradle&quot; name=&quot;platform/tools/external/gradle&quot; groups=&quot;tools&quot; /&gt;
+  &lt;project path=&quot;tools/idea&quot; name=&quot;platform/tools/idea&quot; groups=&quot;notdefault,tools&quot; /&gt;
+  &lt;project path=&quot;tools/motodev&quot; name=&quot;platform/tools/motodev&quot; groups=&quot;notdefault,motodev&quot; /&gt;
+  &lt;project path=&quot;tools/studio/cloud&quot; name=&quot;platform/tools/studio/cloud&quot; groups=&quot;notdefault,tools&quot; /&gt;
+  &lt;project path=&quot;tools/swt&quot; name=&quot;platform/tools/swt&quot; groups=&quot;notdefault,tools&quot; /&gt;
 
-  <remote  name="private"
-           fetch="ssh://git@github.com" />
-
-  <default revision="refs/heads/cm-10.2"
-           remote="github"
-           sync-c="true"
-           sync-j="4" />
-
-  <project path="build" name="CyanogenMod/android_build" groups="pdk" >
-    <copyfile src="core/root.mk" dest="Makefile" />
-  </project>
-
-  <project path="android" name="CyanogenMod/android" />
-
-  <project path="abi/cpp" name="CyanogenMod/android_abi_cpp" groups="pdk" />
-  <project path="bionic" name="CyanogenMod/android_bionic" groups="pdk" />
-  <project path="bootable/diskinstaller" name="CyanogenMod/android_bootable_diskinstaller" />
-  <project path="bootable/recovery" name="CyanogenMod/android_bootable_recovery" />
-  <project path="cts" name="platform/cts" remote="aosp" revision="refs/tags/android-4.3.1_r1" groups="cts" />
-  <project path="dalvik" name="CyanogenMod/android_dalvik" />
-  <project path="developers/build" name="platform/developers/build" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="developers/demos" name="platform/developers/demos" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="developers/docs" name="platform/developers/docs" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="developers/samples/android" name="platform/developers/samples/android" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="development" name="CyanogenMod/android_development" />
-  <project path="device/common" name="CyanogenMod/android_device_common" />
-  <project path="device/generic/armv7-a-neon" name="CyanogenMod/android_device_generic_armv7-a-neon" groups="pdk" />
-  <project path="device/generic/common" name="CyanogenMod/android_device_generic_common" groups="pdk" />
-  <project path="device/generic/goldfish" name="CyanogenMod/android_device_generic_goldfish" groups="pdk" />
-  <project path="device/generic/mips" name="CyanogenMod/android_device_generic_mips" groups="pdk" />
-  <project path="device/generic/x86" name="CyanogenMod/android_device_generic_x86" groups="pdk" />
-  <project path="device/generic/mini-emulator-armv7-a-neon" name="device/generic/mini-emulator-armv7-a-neon" groups="pdk" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="device/generic/mini-emulator-mips" name="device/generic/mini-emulator-mips" groups="pdk" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="device/generic/mini-emulator-x86" name="device/generic/mini-emulator-x86" groups="pdk" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="device/google/accessory/arduino" name="CyanogenMod/android_device_google_accessory_arduino" groups="device" />
-  <project path="device/google/accessory/demokit" name="CyanogenMod/android_device_google_accessory_demokit" groups="device" />
-  <project path="device/sample" name="CyanogenMod/android_device_sample" groups="device" />
-  <project path="docs/source.android.com" name="platform/docs/source.android.com" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="external/aac" name="CyanogenMod/android_external_aac" groups="pdk" />
-  <project path="external/android-clat" name="CyanogenMod/android_external_android-clat" />
-  <project path="external/android-mock" name="CyanogenMod/android_external_android-mock" />
-  <project path="external/ant-glob" name="CyanogenMod/android_external_ant-glob" />
-  <project path="external/antlr" name="CyanogenMod/android_external_antlr" />
-  <project path="external/apache-harmony" name="CyanogenMod/android_external_apache-harmony" />
-  <project path="external/apache-http" name="CyanogenMod/android_external_apache-http" />
-  <project path="external/apache-qp" name="CyanogenMod/android_external_apache-qp" />
-  <project path="external/apache-xml" name="CyanogenMod/android_external_apache-xml" />
-  <project path="external/arduino" name="CyanogenMod/android_external_arduino" />
-  <project path="external/bash" name="CyanogenMod/android_external_bash" />
-  <project path="external/bison" name="CyanogenMod/android_external_bison" groups="pdk" />
-  <project path="external/blktrace" name="CyanogenMod/android_external_blktrace" />
-  <project path="external/bluetooth/bluedroid" name="CyanogenMod/android_external_bluetooth_bluedroid" groups="pdk" />
-  <project path="external/bouncycastle" name="CyanogenMod/android_external_bouncycastle" />
-  <project path="external/bsdiff" name="CyanogenMod/android_external_bsdiff" groups="pdk" />
-  <project path="external/busybox" name="CyanogenMod/android_external_busybox" />
-  <project path="external/bzip2" name="CyanogenMod/android_external_bzip2" groups="pdk" />
-  <project path="external/ceres-solver" name="platform/external/ceres-solver" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="external/checkpolicy" name="CyanogenMod/android_external_checkpolicy" groups="pdk" />
-  <project path="external/chromium" name="CyanogenMod/android_external_chromium" />
-  <project path="external/chromium-trace" name="CyanogenMod/android_external_chromium-trace" groups="pdk" />
-  <project path="external/clang" name="CyanogenMod/android_external_clang" groups="pdk" />
-  <project path="external/compiler-rt" name="CyanogenMod/android_external_compiler-rt" groups="pdk" />
-  <project path="external/crda" name="CyanogenMod/android_external_crda" />
-  <project path="external/dexmaker" name="CyanogenMod/android_external_dexmaker" />
-  <project path="external/dhcpcd" name="CyanogenMod/android_external_dhcpcd" />
-  <project path="external/dnsmasq" name="CyanogenMod/android_external_dnsmasq" groups="pdk" />
-  <project path="external/doclava" name="CyanogenMod/android_external_doclava" />
-  <project path="external/dropbear" name="CyanogenMod/android_external_dropbear" />
-  <project path="external/e2fsprogs" name="CyanogenMod/android_external_e2fsprogs" groups="pdk" />
-  <project path="external/easymock" name="CyanogenMod/android_external_easymock" />
-  <project path="external/eclipse-basebuilder" name="CyanogenMod/android_external_eclipse-basebuilder" />
-  <project path="external/eclipse-windowbuilder" name="CyanogenMod/android_external_eclipse-windowbuilder" />
-  <project path="external/elfutils" name="CyanogenMod/android_external_elfutils" />
-  <project path="external/embunit" name="CyanogenMod/android_external_embunit" />
-  <project path="external/emma" name="CyanogenMod/android_external_emma" />
-  <project path="external/esd" name="CyanogenMod/android_external_esd" />
-  <project path="external/exfat" name="CyanogenMod/android_external_exfat" />
-  <project path="external/expat" name="CyanogenMod/android_external_expat" groups="pdk" />
-  <project path="external/eyes-free" name="CyanogenMod/android_external_eyes-free" />
-  <project path="external/f2fs-tools" name="CyanogenMod/android_external_f2fs-tools" />
-  <project path="external/fdlibm" name="CyanogenMod/android_external_fdlibm" />
-  <project path="external/flac" name="CyanogenMod/android_external_flac" groups="pdk" />
-  <project path="external/freetype" name="CyanogenMod/android_external_freetype" groups="pdk" />
-  <project path="external/fsck_msdos" name="CyanogenMod/android_external_fsck_msdos" />
-  <project path="external/fuse" name="CyanogenMod/android_external_fuse" />
-  <project path="external/ganymed-ssh2" name="CyanogenMod/android_external_ganymed-ssh2" />
-  <project path="external/gcc-demangle" name="CyanogenMod/android_external_gcc-demangle" groups="pdk" />
-  <project path="external/genext2fs" name="CyanogenMod/android_external_genext2fs" />
-  <project path="external/giflib" name="CyanogenMod/android_external_giflib" />
-  <project path="external/google" name="CyanogenMod/android_external_google" />
-  <project path="external/google-diff-match-patch" name="CyanogenMod/android_external_google-diff-match-patch" />
-  <project path="external/grub" name="CyanogenMod/android_external_grub" />
-  <project path="external/gson" name="CyanogenMod/android_external_gson" />
-  <project path="external/gtest" name="CyanogenMod/android_external_gtest" groups="pdk" />
-  <project path="external/guava" name="CyanogenMod/android_external_guava" />
-  <project path="external/hamcrest" name="CyanogenMod/android_external_hamcrest" />
-  <project path="external/harfbuzz" name="CyanogenMod/android_external_harfbuzz" />
-  <project path="external/harfbuzz_ng" name="platform/external/harfbuzz_ng" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="external/heimdall" name="CyanogenMod/android_external_heimdall" />
-  <project path="external/htop" name="CyanogenMod/android_external_htop" />
-  <project path="external/hyphenation" name="CyanogenMod/android_external_hyphenation" />
-  <project path="external/icu4c" name="CyanogenMod/android_external_icu4c" groups="pdk" />
-  <project path="external/iproute2" name="CyanogenMod/android_external_iproute2" groups="pdk" />
-  <project path="external/ipsec-tools" name="CyanogenMod/android_external_ipsec-tools" />
-  <project path="external/iptables" name="CyanogenMod/android_external_iptables" />
-  <project path="external/jack" name="CyanogenMod/android_external_jack" />
-  <project path="external/javasqlite" name="CyanogenMod/android_external_javasqlite" />
-  <project path="external/javassist" name="CyanogenMod/android_external_javassist" />
-  <project path="external/jdiff" name="CyanogenMod/android_external_jdiff" />
-  <project path="external/jhead" name="CyanogenMod/android_external_jhead" groups="pdk" />
-  <project path="external/jmdns" name="CyanogenMod/android_external_jmdns" />
-  <project path="external/jmonkeyengine" name="CyanogenMod/android_external_jmonkeyengine" />
-  <project path="external/jpeg" name="CyanogenMod/android_external_jpeg" groups="pdk" />
-  <project path="external/jsilver" name="CyanogenMod/android_external_jsilver" />
-  <project path="external/jsr305" name="CyanogenMod/android_external_jsr305" />
-  <project path="external/junit" name="CyanogenMod/android_external_junit" />
-  <project path="external/kernel-headers" name="CyanogenMod/android_external_kernel-headers" />
-  <project path="external/kissfft" name="CyanogenMod/android_external_kissfft" />
-  <project path="external/koush/ion" name="CyanogenMod/ion" />
-  <project path="external/koush/AndroidAsync" name="CyanogenMod/AndroidAsync" />
-  <project path="external/koush/Superuser" name="CyanogenMod/Superuser" />
-  <project path="external/koush/Widgets" name="CyanogenMod/Widgets" />
-  <project path="external/libcap-ng" name="CyanogenMod/android_external_libcap-ng" />
-  <project path="external/libffi" name="CyanogenMod/android_external_libffi" />
-  <project path="external/libgsm" name="CyanogenMod/android_external_libgsm" groups="pdk" />
-  <project path="external/liblzf" name="CyanogenMod/android_external_liblzf" groups="pdk" />
-  <project path="external/libmtp" name="CyanogenMod/android_external_libmtp" />
-  <project path="external/libncurses" name="CyanogenMod/android_external_libncurses" />
-  <project path="external/libnfc-nci" name="CyanogenMod/android_external_libnfc-nci" groups="pdk" />
-  <project path="external/libnfc-nxp" name="CyanogenMod/android_external_libnfc-nxp" groups="pdk" />
-  <project path="external/libnl-headers" name="CyanogenMod/android_external_libnl-headers" groups="pdk" />
-  <project path="external/libogg" name="CyanogenMod/android_external_libogg" />
-  <project path="external/libpcap" name="CyanogenMod/android_external_libpcap" />
-  <project path="external/libphonenumber" name="CyanogenMod/android_external_libphonenumber" />
-  <project path="external/libphonenumbergoogle" name="CyanogenMod/android_external_libphonenumbergoogle" />
-  <project path="external/libpng" name="CyanogenMod/android_external_libpng" groups="pdk" />
-  <project path="external/libppp" name="CyanogenMod/android_external_libppp" />
-  <project path="external/libselinux" name="CyanogenMod/android_external_libselinux" groups="pdk" />
-  <project path="external/libsepol" name="CyanogenMod/android_external_libsepol" groups="pdk" />
-  <project path="external/libusb" name="CyanogenMod/android_external_libusb" />
-  <project path="external/libusbx" name="CyanogenMod/android_external_libusbx" />
-  <project path="external/libusb-compat" name="CyanogenMod/android_external_libusb-compat" />
-  <project path="external/libvorbis" name="CyanogenMod/android_external_libvorbis" />
-  <project path="external/libvpx" name="CyanogenMod/android_external_libvpx" groups="pdk" />
-  <project path="external/libxml2" name="CyanogenMod/android_external_libxml2" />
-  <project path="external/libxslt" name="CyanogenMod/android_external_libxslt" />
-  <project path="external/libyuv" name="CyanogenMod/android_external_libyuv" groups="libyuv" />
-  <project path="external/linux-tools-perf" name="CyanogenMod/android_external_linux-tools-perf" />
-  <project path="external/littlemock" name="CyanogenMod/android_external_littlemock" />
-  <project path="external/llvm" name="CyanogenMod/android_external_llvm" groups="pdk" />
-  <project path="external/lsof" name="CyanogenMod/android_external_lsof" />
-  <project path="external/lzo" name="CyanogenMod/android_external_lzo" />
-  <project path="external/marisa-trie" name="platform/external/marisa-trie" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="external/markdown" name="CyanogenMod/android_external_markdown" />
-  <project path="external/mdnsresponder" name="CyanogenMod/android_external_mdnsresponder" groups="pdk" />
-  <project path="external/mksh" name="CyanogenMod/android_external_mksh" groups="pdk" />
-  <project path="external/mockito" name="platform/external/mockito" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="external/mockwebserver" name="CyanogenMod/android_external_mockwebserver" />
-  <project path="external/mp4parser" name="CyanogenMod/android_external_mp4parser" />
-  <project path="external/mtpd" name="CyanogenMod/android_external_mtpd" />
-  <project path="external/nano" name="CyanogenMod/android_external_nano" />
-  <project path="external/naver-fonts" name="CyanogenMod/android_external_naver-fonts" />
-  <project path="external/netcat" name="CyanogenMod/android_external_netcat" />
-  <project path="external/netperf" name="CyanogenMod/android_external_netperf" />
-  <project path="external/neven" name="CyanogenMod/android_external_neven" />
-  <project path="external/nist-pkits" name="platform/external/nist-pkits" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="external/nist-sip" name="CyanogenMod/android_external_nist-sip" />
-  <project path="external/noto-fonts" name="platform/external/noto-fonts" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="external/ntfs-3g" name="CyanogenMod/android_external_ntfs-3g" />
-  <project path="external/oauth" name="CyanogenMod/android_external_oauth" />
-  <project path="external/objenesis" name="platform/external/objenesis" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="external/okhttp" name="CyanogenMod/android_external_okhttp" />
-  <project path="external/open-vcdiff" name="platform/external/open-vcdiff" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="external/opencv" name="CyanogenMod/android_external_opencv" />
-  <project path="external/openfst" name="CyanogenMod/android_external_openfst" />
-  <project path="external/openssh" name="CyanogenMod/android_external_openssh" />
-  <project path="external/openssl" name="CyanogenMod/android_external_openssl" groups="pdk" />
-  <project path="external/openvpn" name="CyanogenMod/android_external_openvpn" />
-  <project path="external/oprofile" name="CyanogenMod/android_external_oprofile" />
-  <project path="external/pciutils" name="CyanogenMod/android_external_pciutils" />
-  <project path="external/pigz" name="CyanogenMod/android_external_pigz" />
-  <project path="external/ping" name="CyanogenMod/android_external_ping" />
-  <project path="external/ping6" name="CyanogenMod/android_external_ping6" />
-  <project path="external/powertop" name="CyanogenMod/android_external_powertop" />
-  <project path="external/ppp" name="CyanogenMod/android_external_ppp" />
-  <project path="external/proguard" name="CyanogenMod/android_external_proguard" groups="pdk-java" />
-  <project path="external/protobuf" name="CyanogenMod/android_external_protobuf" groups="pdk" />
-  <project path="external/qemu" name="CyanogenMod/android_external_qemu" />
-  <project path="external/qemu-pc-bios" name="CyanogenMod/android_external_qemu-pc-bios" />
-  <project path="external/qrngd" name="CyanogenMod/android_external_qrngd" />
-  <project path="external/quake" name="CyanogenMod/android_external_quake" />
-  <project path="external/regex-re2" name="CyanogenMod/android_external_regex-re2" />
-  <project path="external/replicaisland" name="CyanogenMod/android_external_replicaisland" />
-  <project path="external/robolectric" name="platform/external/robolectric" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="external/rsync" name="CyanogenMod/android_external_rsync" />
-  <project path="external/safe-iop" name="CyanogenMod/android_external_safe-iop" groups="pdk" />
-  <project path="external/sepolicy" name="CyanogenMod/android_external_sepolicy" groups="pdk" />
-  <project path="external/skia" name="CyanogenMod/android_external_skia" />
-  <project path="external/smack" name="platform/external/smack" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="external/smali" name="CyanogenMod/android_external_smali" />
-  <project path="external/sonivox" name="CyanogenMod/android_external_sonivox" groups="pdk" />
-  <project path="external/speex" name="CyanogenMod/android_external_speex" groups="pdk" />
-  <project path="external/spongycastle" name="CyanogenMod/android_external_spongycastle" groups="pdk" />
-  <project path="external/sqlite" name="CyanogenMod/android_external_sqlite" groups="pdk" />
-  <project path="external/srec" name="CyanogenMod/android_external_srec" />
-  <project path="external/srtp" name="CyanogenMod/android_external_srtp" />
-  <project path="external/stlport" name="CyanogenMod/android_external_stlport" groups="pdk" />
-  <project path="external/strace" name="CyanogenMod/android_external_strace" />
-  <project path="external/stressapptest" name="CyanogenMod/android_external_stressapptest" />
-  <project path="external/svox" name="CyanogenMod/android_external_svox" />
-  <project path="external/tagsoup" name="CyanogenMod/android_external_tagsoup" />
-  <project path="external/tcpdump" name="CyanogenMod/android_external_tcpdump" />
-  <project path="external/timezonepicker-support" name="platform/external/timezonepicker-support" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="external/tinyalsa" name="CyanogenMod/android_external_tinyalsa" groups="pdk" />
-  <project path="external/tinyxml" name="CyanogenMod/android_external_tinyxml" groups="pdk" />
-  <project path="external/tinyxml2" name="CyanogenMod/android_external_tinyxml2" groups="pdk" />
-  <project path="external/tremolo" name="CyanogenMod/android_external_tremolo" groups="pdk" />
-  <project path="external/v8" name="CyanogenMod/android_external_v8" />
-  <project path="external/valgrind" name="CyanogenMod/android_external_valgrind" groups="pdk" />
-  <project path="external/vim" name="CyanogenMod/android_external_vim" />
-  <project path="external/webkit" name="CyanogenMod/android_external_webkit" />
-  <project path="external/webp" name="CyanogenMod/android_external_webp" />
-  <project path="external/webrtc" name="CyanogenMod/android_external_webrtc" groups="pdk" />
-  <project path="external/wpa_supplicant_8" name="CyanogenMod/android_external_wpa_supplicant_8" groups="pdk" />
-  <project path="external/wpa_supplicant_8_ti" name="CyanogenMod/android_external_wpa_supplicant_8_ti" />
-  <project path="external/xmlwriter" name="CyanogenMod/android_external_xmlwriter" />
-  <project path="external/xmp_toolkit" name="CyanogenMod/android_external_xmp_toolkit" />
-  <project path="external/yaffs2" name="CyanogenMod/android_external_yaffs2" groups="pdk" />
-  <project path="external/zlib" name="CyanogenMod/android_external_zlib" groups="pdk" />
-  <project path="external/zxing" name="CyanogenMod/android_external_zxing" />
-  <project path="frameworks/av" name="CyanogenMod/android_frameworks_av" groups="pdk" />
-  <project path="frameworks/base" name="CyanogenMod/android_frameworks_base" />
-  <project path="frameworks/compile/libbcc" name="CyanogenMod/android_frameworks_compile_libbcc" groups="pdk" />
-  <project path="frameworks/compile/mclinker" name="CyanogenMod/android_frameworks_compile_mclinker" groups="pdk" />
-  <project path="frameworks/compile/slang" name="CyanogenMod/android_frameworks_compile_slang" groups="pdk" />
-  <project path="frameworks/ex" name="CyanogenMod/android_frameworks_ex" />
-  <project path="frameworks/mff" name="CyanogenMod/android_frameworks_mff" />
-  <project path="frameworks/ml" name="CyanogenMod/android_frameworks_ml" />
-  <project path="frameworks/native" name="CyanogenMod/android_frameworks_native" groups="pdk" />
-  <project path="frameworks/opt/calendar" name="CyanogenMod/android_frameworks_opt_calendar" />
-  <project path="frameworks/opt/carddav" name="CyanogenMod/android_frameworks_opt_carddav" />
-  <project path="frameworks/opt/colorpicker" name="CyanogenMod/android_frameworks_opt_colorpicker" />
-  <project path="frameworks/opt/datetimepicker" name="CyanogenMod/android_frameworks_opt_datetimepicker" />
-  <project path="frameworks/opt/emoji" name="CyanogenMod/android_frameworks_opt_emoji" />
-  <project path="frameworks/opt/hardware" name="CyanogenMod/android_frameworks_opt_hardware" />
-  <project path="frameworks/opt/inputmethodcommon" name="CyanogenMod/android_frameworks_opt_inputmethodcommon" />
-  <project path="frameworks/opt/mailcommon" name="CyanogenMod/android_frameworks_opt_mailcommon" />
-  <project path="frameworks/opt/mms" name="CyanogenMod/android_frameworks_opt_mms" />
-  <project path="frameworks/opt/net/voip" name="CyanogenMod/android_frameworks_opt_net_voip" />
-  <project path="frameworks/opt/photoviewer" name="CyanogenMod/android_frameworks_opt_photoviewer" />
-  <project path="frameworks/opt/timezonepicker" name="CyanogenMod/android_frameworks_opt_timezonepicker" />
-  <project path="frameworks/opt/telephony" name="CyanogenMod/android_frameworks_opt_telephony" groups="pdk" />
-  <project path="frameworks/opt/telephony-msim" name="CyanogenMod/android_frameworks_opt_telephony-msim" />
-  <project path="frameworks/opt/vcard" name="CyanogenMod/android_frameworks_opt_vcard" />
-  <project path="frameworks/rs" name="CyanogenMod/android_frameworks_rs" groups="pdk" />
-  <project path="frameworks/support" name="CyanogenMod/android_frameworks_support" />
-  <project path="frameworks/testing" name="CyanogenMod/android_frameworks_testing" />
-  <project path="frameworks/volley" name="CyanogenMod/android_frameworks_volley" />
-  <project path="frameworks/webview" name="CyanogenMod/android_frameworks_webview" />
-  <project path="frameworks/wilhelm" name="CyanogenMod/android_frameworks_wilhelm" />
-  <project path="hardware/akm" name="CyanogenMod/android_hardware_akm" groups="pdk" />
-  <project path="hardware/broadcom/libbt" name="CyanogenMod/android_hardware_broadcom_libbt" groups="pdk" />
-  <project path="hardware/broadcom/wlan" name="CyanogenMod/android_hardware_broadcom_wlan" groups="broadcom_wlan" />
-  <project path="hardware/cm" name="CyanogenMod/android_hardware_cm" />
-  <project path="hardware/invensense" name="CyanogenMod/android_hardware_invensense" groups="invensense" />
-  <project path="hardware/libhardware" name="CyanogenMod/android_hardware_libhardware" groups="pdk" />
-  <project path="hardware/libhardware_legacy" name="CyanogenMod/android_hardware_libhardware_legacy" groups="pdk" />
-  <project path="hardware/msm7k" name="CyanogenMod/android_hardware_msm7k" />
-  <project path="hardware/qcom/audio" name="CyanogenMod/android_hardware_qcom_audio" groups="qcom" />
-  <project path="hardware/qcom/audio-caf" name="CyanogenMod/android_hardware_qcom_audio-caf" groups="caf" />
-  <project path="hardware/qcom/bt" name="CyanogenMod/android_hardware_qcom_bt" groups="qcom" />
-  <project path="hardware/qcom/display" name="CyanogenMod/android_hardware_qcom_display" groups="qcom" />
-  <project path="hardware/qcom/display-caf" name="CyanogenMod/android_hardware_qcom_display-caf" groups="caf" />
-  <project path="hardware/qcom/gps" name="CyanogenMod/android_hardware_qcom_gps" groups="qcom" />
-  <project path="hardware/qcom/keymaster" name="CyanogenMod/android_hardware_qcom_keymaster" groups="qcom" />
-  <project path="hardware/qcom/media" name="CyanogenMod/android_hardware_qcom_media" groups="qcom" />
-  <project path="hardware/qcom/media-caf" name="CyanogenMod/android_hardware_qcom_media-caf" groups="caf" />
-  <project path="hardware/qcom/msm8960" name="CyanogenMod/android_hardware_qcom_msm8960" groups="qcom_msm8960" />
-  <project path="hardware/qcom/power" name="CyanogenMod/android_hardware_qcom_power" />
-  <project path="hardware/qcom/sensors" name="CyanogenMod/android_hardware_qcom_sensors" />
-  <project path="hardware/qcom/wlan" name="CyanogenMod/android_hardware_qcom_wlan" />
-  <project path="hardware/ril" name="CyanogenMod/android_hardware_ril" groups="pdk"  />
-  <project path="hardware/samsung_slsi/exynos5" name="CyanogenMod/android_hardware_samsung_slsi_exynos5" />
-  <project path="hardware/ti/omap3" name="CyanogenMod/android_hardware_ti_omap3" />
-  <project path="hardware/ti/omap4xxx" name="CyanogenMod/android_hardware_ti_omap4xxx" />
-  <project path="hardware/ti/wlan" name="CyanogenMod/android_hardware_ti_wlan" />
-  <project path="hardware/ti/wpan" name="CyanogenMod/android_hardware_ti_wpan" />
-  <project path="libcore" name="CyanogenMod/android_libcore" />
-  <project path="libnativehelper" name="CyanogenMod/android_libnativehelper" groups="pdk-java" />
-  <project path="ndk" name="platform/ndk" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="packages/apps/Apollo" name="CyanogenMod/android_packages_apps_Apollo" />
-  <project path="packages/apps/BasicSmsReceiver" name="CyanogenMod/android_packages_apps_BasicSmsReceiver" />
-  <project path="packages/apps/Bluetooth" name="CyanogenMod/android_packages_apps_Bluetooth" />
-  <project path="packages/apps/BluetoothExt" name="CyanogenMod/android_packages_apps_BluetoothExt" />
-  <project path="packages/apps/Browser" name="CyanogenMod/android_packages_apps_Browser" />
-  <project path="packages/apps/Calculator" name="CyanogenMod/android_packages_apps_Calculator" />
-  <project path="packages/apps/Calendar" name="CyanogenMod/android_packages_apps_Calendar" />
-  <project path="packages/apps/CellBroadcastReceiver" name="CyanogenMod/android_packages_apps_CellBroadcastReceiver" />
-  <project path="packages/apps/CertInstaller" name="CyanogenMod/android_packages_apps_CertInstaller" />
-  <project path="packages/apps/CMAccount" name="CyanogenMod/android_packages_apps_CMAccount" />
-  <project path="packages/apps/CMFileManager" name="CyanogenMod/android_packages_apps_CMFileManager" />
-  <project path="packages/apps/CMUpdater" name="CyanogenMod/android_packages_apps_CMUpdater" />
-  <project path="packages/apps/CMWallpapers" name="CyanogenMod/android_packages_apps_CMWallpapers" />
-  <project path="packages/apps/Contacts" name="CyanogenMod/android_packages_apps_Contacts" />
-  <project path="packages/apps/ContactsCommon" name="CyanogenMod/android_packages_apps_ContactsCommon" />
-  <project path="packages/apps/DeskClock" name="CyanogenMod/android_packages_apps_DeskClock" />
-  <project path="packages/apps/Dialer" name="CyanogenMod/android_packages_apps_Dialer" />
-  <project path="packages/apps/DSPManager" name="CyanogenMod/android_packages_apps_DSPManager" />
-  <project path="packages/apps/Email" name="CyanogenMod/android_packages_apps_Email" />
-  <project path="packages/apps/Exchange" name="CyanogenMod/android_packages_apps_Exchange" />
-  <project path="packages/apps/Gallery2" name="CyanogenMod/android_packages_apps_Gallery2" />
-  <project path="packages/apps/HTMLViewer" name="CyanogenMod/android_packages_apps_HTMLViewer" />
-  <project path="packages/apps/KeyChain" name="CyanogenMod/android_packages_apps_KeyChain" />
-  <project path="packages/apps/LockClock" name="CyanogenMod/android_packages_apps_LockClock" />
-  <project path="packages/apps/Mms" name="CyanogenMod/android_packages_apps_Mms" />
-  <project path="packages/apps/Nfc" name="CyanogenMod/android_packages_apps_Nfc" />
-  <project path="packages/apps/OneTimeInitializer" name="CyanogenMod/android_packages_apps_OneTimeInitializer" />
-  <project path="packages/apps/PackageInstaller" name="CyanogenMod/android_packages_apps_PackageInstaller" />
-  <project path="packages/apps/Phone" name="CyanogenMod/android_packages_apps_Phone" />
-  <project path="packages/apps/PhoneCommon" name="CyanogenMod/android_packages_apps_PhoneCommon" />
-  <project path="packages/apps/Provision" name="CyanogenMod/android_packages_apps_Provision" />
-  <project path="packages/apps/QuickSearchBox" name="CyanogenMod/android_packages_apps_QuickSearchBox" />
-  <project path="packages/apps/Settings" name="CyanogenMod/android_packages_apps_Settings" />
-  <project path="packages/apps/SmartCardService" name="CyanogenMod/android_packages_apps_SmartCardService" />
-  <project path="packages/apps/SoundRecorder" name="CyanogenMod/android_packages_apps_SoundRecorder" />
-  <project path="packages/apps/SpeechRecorder" name="CyanogenMod/android_packages_apps_SpeechRecorder" />
-  <project path="packages/apps/Stk" name="CyanogenMod/android_packages_apps_Stk" />
-  <project path="packages/apps/Tag" name="CyanogenMod/android_packages_apps_Tag" />
-  <project path="packages/apps/Torch" name="CyanogenMod/android_packages_apps_Torch" />
-  <project path="packages/apps/Trebuchet" name="CyanogenMod/android_packages_apps_Trebuchet" />
-  <project path="packages/apps/VideoEditor" name="CyanogenMod/android_packages_apps_VideoEditor" />
-  <project path="packages/apps/VoiceDialer" name="CyanogenMod/android_packages_apps_VoiceDialer" />
-  <project path="packages/apps/VoicePlus" name="CyanogenMod/android_packages_apps_VoicePlus" />
-  <project path="packages/experimental" name="CyanogenMod/android_packages_experimental" />
-  <project path="packages/inputmethods/LatinIME" name="CyanogenMod/android_packages_inputmethods_LatinIME" />
-  <project path="packages/inputmethods/OpenWnn" name="CyanogenMod/android_packages_inputmethods_OpenWnn" />
-  <project path="packages/inputmethods/PinyinIME" name="CyanogenMod/android_packages_inputmethods_PinyinIME" />
-  <project path="packages/providers/ApplicationsProvider" name="CyanogenMod/android_packages_providers_ApplicationsProvider" />
-  <project path="packages/providers/CalendarProvider" name="CyanogenMod/android_packages_providers_CalendarProvider" />
-  <project path="packages/providers/ContactsProvider" name="CyanogenMod/android_packages_providers_ContactsProvider" />
-  <project path="packages/providers/DownloadProvider" name="CyanogenMod/android_packages_providers_DownloadProvider" />
-  <project path="packages/providers/DrmProvider" name="CyanogenMod/android_packages_providers_DrmProvider" />
-  <project path="packages/providers/MediaProvider" name="CyanogenMod/android_packages_providers_MediaProvider" />
-  <project path="packages/providers/PartnerBookmarksProvider" name="CyanogenMod/android_packages_providers_PartnerBookmarksProvider" />
-  <project path="packages/providers/TelephonyProvider" name="CyanogenMod/android_packages_providers_TelephonyProvider" />
-  <project path="packages/providers/UserDictionaryProvider" name="CyanogenMod/android_packages_providers_UserDictionaryProvider" />
-  <project path="packages/screensavers/Basic" name="CyanogenMod/android_packages_screensavers_Basic" />
-  <project path="packages/screensavers/PhotoTable" name="CyanogenMod/android_packages_screensavers_PhotoTable" />
-  <project path="packages/screensavers/WebView" name="CyanogenMod/android_packages_screensavers_WebView" />
-  <project path="packages/wallpapers/Basic" name="CyanogenMod/android_packages_wallpapers_Basic" />
-  <project path="packages/wallpapers/Galaxy4" name="CyanogenMod/android_packages_wallpapers_Galaxy4" />
-  <project path="packages/wallpapers/HoloSpiral" name="CyanogenMod/android_packages_wallpapers_HoloSpiral" />
-  <project path="packages/wallpapers/LivePicker" name="CyanogenMod/android_packages_wallpapers_LivePicker" />
-  <project path="packages/wallpapers/MagicSmoke" name="CyanogenMod/android_packages_wallpapers_MagicSmoke" />
-  <project path="packages/wallpapers/MusicVisualization" name="CyanogenMod/android_packages_wallpapers_MusicVisualization" />
-  <project path="packages/wallpapers/NoiseField" name="CyanogenMod/android_packages_wallpapers_NoiseField" />
-  <project path="packages/wallpapers/PhaseBeam" name="CyanogenMod/android_packages_wallpapers_PhaseBeam" />
-  <project path="pdk" name="platform/pdk" remote="aosp" revision="refs/tags/android-4.3.1_r1" groups="pdk" />
-  <project path="prebuilt" name="CyanogenMod/android_prebuilt" />
-  <project path="prebuilts/clang/darwin-x86/3.1" name="platform/prebuilts/clang/darwin-x86/3.1" groups="darwin" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/clang/darwin-x86/3.2" name="platform/prebuilts/clang/darwin-x86/3.2" groups="darwin" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/clang/linux-x86/3.1" name="platform/prebuilts/clang/linux-x86/3.1" groups="linux" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/clang/linux-x86/3.2" name="platform/prebuilts/clang/linux-x86/3.2" groups="linux" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/devtools" name="platform/prebuilts/devtools" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/eclipse" name="platform/prebuilts/eclipse" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.6" name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.6" groups="darwin,arm" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7" name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7" remote="aosp" groups="pdk,darwin,arm" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.6" name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.6" groups="darwin,arm" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.7" name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.7" groups="pdk,darwin,arm" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/gcc/darwin-x86/host/headers" name="platform/prebuilts/gcc/darwin-x86/host/headers" groups="pdk,darwin" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" groups="pdk,darwin" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/gcc/darwin-x86/mips/mipsel-linux-android-4.6" name="platform/prebuilts/gcc/darwin-x86/mips/mipsel-linux-android-4.6" groups="darwin,mips" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/gcc/darwin-x86/mips/mipsel-linux-android-4.7" name="platform/prebuilts/gcc/darwin-x86/mips/mipsel-linux-android-4.7" groups="pdk,darwin,mips" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.6" name="platform/prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.6" groups="darwin,x86" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.7" name="platform/prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.7" groups="pdk,darwin,x86" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.6" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.6" groups="linux,arm" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" groups="pdk,linux,arm" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6" groups="linux,arm" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" groups="pdk,linux,arm" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.4.3" name="platform/prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.4.3" groups="linux" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6" name="platform/prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6" groups="linux" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6" groups="linux" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/gcc/linux-x86/mips/mipsel-linux-android-4.6" name="platform/prebuilts/gcc/linux-x86/mips/mipsel-linux-android-4.6" groups="linux,mips" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/gcc/linux-x86/mips/mipsel-linux-android-4.7" name="platform/prebuilts/gcc/linux-x86/mips/mipsel-linux-android-4.7" groups="pdk,linux,mips" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/gcc/linux-x86/x86/i686-linux-android-4.6" name="platform/prebuilts/gcc/linux-x86/x86/i686-linux-android-4.6" groups="linux,x86" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/gcc/linux-x86/x86/i686-linux-android-4.7" name="platform/prebuilts/gcc/linux-x86/x86/i686-linux-android-4.7" groups="pdk,linux,x86" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="prebuilts/misc" name="platform/prebuilts/misc" remote="aosp" revision="refs/tags/android-4.3.1_r1" groups="pdk" />
-  <project path="prebuilts/ndk" name="platform/prebuilts/ndk" remote="aosp" revision="refs/tags/android-4.3.1_r1" groups="pdk" />
-  <project path="prebuilts/qemu-kernel" name="platform/prebuilts/qemu-kernel" remote="aosp" revision="refs/tags/android-4.3.1_r1" groups="pdk" />
-  <project path="prebuilts/sdk" name="platform/prebuilts/sdk" remote="aosp" revision="refs/tags/android-4.3.1_r1" groups="pdk" />
-  <project path="prebuilts/tools" name="platform/prebuilts/tools" remote="aosp" revision="refs/tags/android-4.3.1_r1" groups="pdk,tools" />
-  <project path="sdk" name="CyanogenMod/android_sdk" />
-  <project path="system/bluetooth" name="CyanogenMod/android_system_bluetooth" groups="pdk" />
-  <project path="system/core" name="CyanogenMod/android_system_core" groups="pdk" />
-  <project path="system/extras" name="CyanogenMod/android_system_extras" groups="pdk" />
-  <project path="system/media" name="CyanogenMod/android_system_media" groups="pdk" />
-  <project path="system/netd" name="CyanogenMod/android_system_netd" groups="pdk" />
-  <project path="system/qcom" name="CyanogenMod/android_system_qcom" groups="qcom" />
-  <project path="system/security" name="CyanogenMod/android_system_security" groups="pdk" />
-  <project path="system/vold" name="CyanogenMod/android_system_vold" groups="pdk" />
-  <project path="tools/adt/eclipse" name="platform/tools/adt/eclipse" groups="notdefault,tools" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="tools/adt/idea" name="platform/tools/adt/idea" groups="notdefault,tools" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="tools/base" name="platform/tools/base" groups="notdefault,tools" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="tools/build" name="platform/tools/build" groups="notdefault,tools" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="tools/emulator" name="platform/tools/emulator" groups="notdefault,tools" remote="aosp" revision="refs/tags/android-4.3.1_r1" />  
-  <project path="tools/external/fat32lib" name="platform/tools/external/fat32lib" groups="tools" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="tools/external/gradle" name="platform/tools/external/gradle" groups="notdefault,tools" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="tools/idea" name="platform/tools/idea" groups="notdefault,tools" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" remote="aosp" revision="refs/tags/android-4.3.1_r1" />
-  <project path="vendor/cm" name="CyanogenMod/android_vendor_cm" />
-  <project path="vendor/qcom/opensource/v8" name="CyanogenMod/android_vendor_qcom_opensource_v8" />
-  <project path="vendor/tmobile/apps/ThemeChooser" name="CyanogenMod/themes-platform-vendor-tmobile-apps-ThemeChooser" />
-  <project path="vendor/tmobile/libs/com.tmobile.themes" name="CyanogenMod/android_vendor_tmobile_libs_com.tmobile.themes" />
-  <project path="vendor/tmobile/providers/ThemeManager" name="CyanogenMod/android_vendor_tmobile_providers_ThemeManager" />
-
- <!--Xperia Sola-->
-  
-  <project path="kernel/sony/u8500" name="munjeni/android_kernel_xperiago" remote="github" revision="jb-dev" />
-  <project path="device/sony/pepper" name="tadeas482/android_device_sony_pepper" remote="github" revision="cm-10.2" />
-  <project path="vendor/sony/pepper" name="tadeas482/proprietary_vendor_sony" remote="github" revision="master" />
-  <project path="hardware/semc" name="munjeni/aosp_4.3_hardware_semc" remote="github" revision="master" />
-</manifest>
+&lt;/manifest&gt;
+</pre><div class="footer">Powered by <a href="https://code.google.com/p/gitiles/">Gitiles</a></div></body></html>
