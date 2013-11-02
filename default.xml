@@ -428,4 +428,10 @@
   <project path="tools/studio/cloud" name="platform/tools/studio/cloud" groups="notdefault,tools" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
 
+ <!--Xperia Sola-->
+  
+  <project path="device/sony/pepper" name="tadeas482/android_device_sony_pepper" remote="github" revision="aosp-4.4" />
+  <project path="vendor/sony/pepper" name="tadeas482/proprietary_vendor_sony" remote="github" revision="master" />
+  <project path="hardware/semc" name="munjeni/aosp_4.3_hardware_semc" remote="github" revision="master" />
+
 </manifest>
