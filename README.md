@@ -2,8 +2,6 @@
 
 Getting Started :
 
-    curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > /root/bin/repo
-    chmod 755 /root/bin/repo
     mkdir aosp-4.4
     cd aosp-4.4
     repo init -u https://github.com/tadeas482/manifest.git -b aosp-4.4
@@ -19,6 +17,7 @@ Patch android source code :
     patch -p1 < device/sony/pepper/patches/system_core.patch
     patch -p1 < device/sony/pepper/patches/system_netd.patch
     patch -p1 < device/sony/pepper/patches/frameworks_opt_telephony.patch
+    patch -p1 < device/sony/pepper/patches/build.patch
 
 Our step is optional!!! Use only if you going to sync AOSP source code daily, than simple revert each patch before you sync AOSP source code :
 
@@ -30,6 +29,7 @@ Our step is optional!!! Use only if you going to sync AOSP source code daily, th
     patch -p1 -R < device/sony/pepper/patches/system_core.patch
     patch -p1 -R < device/sony/pepper/patches/system_netd.patch
     patch -p1 -R < device/sony/pepper/patches/frameworks_opt_telephony.patch
+    patch -p1 -R < device/sony/pepper/patches/build.patch
     repo forall -p -c 'git checkout -f'
     repo sync
     patch -p1 < device/sony/pepper/patches/framework_av.patch
@@ -40,6 +40,7 @@ Our step is optional!!! Use only if you going to sync AOSP source code daily, th
     patch -p1 < device/sony/pepper/patches/system_core.patch
     patch -p1 < device/sony/pepper/patches/system_netd.patch
     patch -p1 < device/sony/pepper/patches/frameworks_opt_telephony.patch
+    patch -p1 < device/sony/pepper/patches/build.patch
 
 You are ready to build :
 
