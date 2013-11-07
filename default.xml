@@ -12,10 +12,10 @@
   <remote  name="private"
            fetch="ssh://git@github.com" />
 
-  <default revision="refs/heads/cm-10.2"
+  <default revision="refs/tags/cm-10.2-M1"
            remote="github"
            sync-c="true"
-           sync-j="4" />
+           sync-j="8" />
 
   <project path="build" name="CyanogenMod/android_build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
