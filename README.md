@@ -41,6 +41,7 @@ Our step is optional!!! Use only if you going to sync CM 11 source code daily, t
     patch -p1 < device/sony/pepper/patches/bionic.patch
 
 Download CM prebuilts :
+   
    cd vendor/cm
    ./get-prebuilts
    cd ../..
