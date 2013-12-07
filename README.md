@@ -6,7 +6,6 @@ Getting Started :
     cd slim-4.4
     repo init -u https://github.com/tadeas482/manifest.git -b slim-4.4
     repo sync
-    cd device
 
 Patch android source code :
 
