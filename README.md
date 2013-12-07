@@ -6,7 +6,6 @@ Getting Started :
     cd cm-11.0
     repo init -u https://github.com/tadeas482/manifest.git -b cm-11.0
     repo sync
-    cd device
 
 Patch android source code :
 
