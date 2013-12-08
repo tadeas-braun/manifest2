@@ -417,5 +417,5 @@
   <project path="kernel/sony/u8500" name="munjeni/android_kernel_xperiago" remote="github" revision="jb-dev" />
   <project path="device/sony/pepper" name="tadeas482/android_device_sony_pepper" remote="github" revision="omni-4.3" />
   <project path="vendor/sony/pepper" name="tadeas482/proprietary_vendor_sony" remote="github" revision="master" />
-  <project path="hardware/semc" name="munjeni/aosp_4.3_hardware_semc" remote="github" revision="master" />
+  <project path="hardware/semc" name="munjeni/android_hardware_semc" remote="github" revision="master" />
 </manifest>
