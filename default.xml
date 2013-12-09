@@ -437,4 +437,3 @@
   <project path="vendor/sony/pepper" name="tadeas482/proprietary_vendor_sony" remote="github" revision="master" />
   <project path="hardware/semc" name="munjeni/android_hardware_semc" remote="github" revision="master" />
 </manifest>
-</manifest>
