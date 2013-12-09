@@ -1,10 +1,10 @@
-**Unoficial CM 11.0 (Android 4.4 KitKat) for Sony Xperia Sola**
+**Unoficial AOSP 4.4.1 for Sony Xperia Sola**
 
 Getting Started :
 
-    mkdir cm-11.0
-    cd cm-11.0
-    repo init -u https://github.com/tadeas482/manifest.git -b cm-11.0
+    mkdir aosp-4.4
+    cd aosp-4.4
+    repo init -u https://github.com/tadeas482/manifest.git -b aosp-4.4
     repo sync
 
 Patch android source code :
@@ -19,7 +19,7 @@ Patch android source code :
     patch -p1 < device/sony/pepper/patches/bootable_recovery.patch
     patch -p1 < device/sony/pepper/patches/external_bluetooth_bluedroid.patch
 
-Our step is optional!!! Use only if you going to sync CM 11 source code daily, than simple revert each patch before you sync CM 11 source code :
+Our step is optional!!! Use only if you going to sync AOSP source code daily, than simple revert each patch before you sync AOSP source code :
 
     patch -p1 -R < device/sony/pepper/patches/framework_av.patch
     patch -p1 -R < device/sony/pepper/patches/framework_native.patch
@@ -42,15 +42,10 @@ Our step is optional!!! Use only if you going to sync CM 11 source code daily, t
     patch -p1 < device/sony/pepper/patches/bootable_recovery.patch
     patch -p1 < device/sony/pepper/patches/external_bluetooth_bluedroid.patch
 
-Download CM prebuilts :
-   cd vendor/cm
-   ./get-prebuilts
-   cd ../..
-
 You are ready to build :
 
     . build/envsetup.sh
-    lunch cm_pepper-userdebug
+    lunch full_pepper-userdebug
     make otapackage
 
 ENJOY!
