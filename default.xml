@@ -450,7 +450,7 @@
   
 <!--Xperia Sola-->
   
-  <project path="kernel/sony/u8500" name="tadeas482/android_kernel_u8500" remote="github" revision="stable" />
+  <project path="kernel/sony/u8500" name="tadeas482/android_kernel_xperiago" remote="github" revision="cm-11" />
   <project path="device/sony/pepper" name="tadeas482/android_device_sony_pepper" remote="github" revision="omni-4.4" />
   <project path="vendor/sony/pepper" name="tadeas482/proprietary_vendor_sony" remote="github" revision="master" />
   <project path="hardware/semc" name="munjeni/android_hardware_semc" remote="github" revision="master" />
